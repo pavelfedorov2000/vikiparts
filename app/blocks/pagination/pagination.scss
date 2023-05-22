@@ -1,6 +1,5 @@
-.pagination {
-	display: flex;
-    justify-content: center;
+/* .pagination {
+	@include flex-center-x;
 
 	// .pagination__list
 
@@ -10,41 +9,29 @@
 
 	// .pagination__item
 
-	&__item {
-		
-	}
+	&__item {}
 
 	// .pagination__link
 
 	&__link {
 
-		&.active {
-			
-		}
+		&.active {}
 
 		@media (any-hover: hover) {
-			&:hover {
-				
-			}
+			&:hover {}
 		}
 	}
 
 	&__prev,
 	&__next {
 		@media (any-hover: hover) {
-			&:hover {
-				
-			}
+			&:hover {}
 		}
 	}
 
-	&__prev {
-		
-	}
+	&__prev {}
 
 	// .pagination__next
 
-	&__next {
-		
-	}
-}
+	&__next {}
+} */

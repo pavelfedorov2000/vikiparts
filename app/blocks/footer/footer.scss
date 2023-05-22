@@ -2,20 +2,35 @@
 	// .footer__top
 
 	&__top {
+		padding: rem(16) 0 rem(6);
 		background-color: var(--dark);
 		color: var(--white);
+
+		@include media('1024', max) {
+			padding-bottom: rem(16);
+		}
 	}
 
 	&__top-inner {
+		display: grid;
+		gap: rem(16);
+
 		@include media('1025', min) {
 			align-items: center;
+			grid-template-columns: calc(282 / var(--container-width) * 100%) 1fr;
 			grid-template-areas:
-				'logo menu menu menu'
+				'logo menu'
 			;
 		}
 	}
 
 	&__logo {
+		.logo__img {
+			display: block;
+			width: rem(239);
+			height: rem(100);
+		}
+
 		@include media('1025', min) {
 			grid-area: logo;
 		}
@@ -30,19 +45,36 @@
 	// .footer__main
 
 	&__main {
+		padding: rem(22) 0 rem(26);
 		background-color: var(--gray);
 	}
 
 	// .footer__main-inner
 
-	&__top-inner,
 	&__main-inner {
 		display: grid;
-		grid-template-columns: calc(282 / var(--container-width) * 100%) repeat(3, 1fr);
-		gap: rem(16);
+		gap: rem(16) calc(62 / 1200 * 100%);
+
+		@include media('501', min) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: rem(30);
+		}
+
+		@include media('1025', min) {
+			column-gap: calc(62 / 1200 * 100%);
+			grid-template-columns: repeat(2, 1fr) repeat(2, minmax(calc(225 / 1200 * 100%), auto));
+		}
 	}
 
 	&__main-inner {
+		@include media('501', min) {
+			grid-template-areas:
+				'contacts call'
+				'menu-1 menu-2'
+				'copy developer'
+			;
+		}
+
 		@include media('1025', min) {
 			grid-template-areas:
 				'contacts call menu-1 menu-2'
@@ -57,13 +89,13 @@
 		@include flex-column-start;
 
 		&--contacts {
-			@include media('768', min) {
+			@include media('501', min) {
 				grid-area: contacts;
 			}
 		}
 
 		&--call {
-			@include media('768', min) {
+			@include media('501', min) {
 				grid-area: call;
 			}
 		}
@@ -99,6 +131,8 @@
 	// .footer__schedule
 
 	&__schedule {
+		margin-bottom: rem(3);
+
 		>div {
 			display: flex;
 			gap: 2px;
@@ -116,10 +150,6 @@
 		margin-bottom: rem(22);
 	}
 
-	// .footer__contact
-
-	&__contact {}
-
 	&__btn {
 		padding: rem(11.5) rem(18);
 	}
@@ -127,14 +157,15 @@
 	// .footer__menu
 
 	&__menu {
+
 		&-1 {
-			@include media('768', min) {
+			@include media('501', min) {
 				grid-area: menu-1;
 			}
 		}
 
 		&-2 {
-			@include media('768', min) {
+			@include media('501', min) {
 				grid-area: menu-2;
 			}
 		}
@@ -145,7 +176,7 @@
 	&__copyright {
 		@include font-size(14, 25);
 
-		@include media('768', min) {
+		@include media('501', min) {
 			grid-area: copy;
 		}
 	}
@@ -155,7 +186,7 @@
 	&__developer {
 		@include flex-center-y;
 
-		@include media('768', min) {
+		@include media('501', min) {
 			grid-area: developer;
 		}
 	}
@@ -174,5 +205,16 @@
 
 	&__developer-text {
 		@include font-size(12, 20);
+
+		a {
+			text-decoration: underline;
+			transition: var(--transition) color;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
 	}
 }

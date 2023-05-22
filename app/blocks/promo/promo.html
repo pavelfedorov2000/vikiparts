@@ -1,9 +1,9 @@
-<div class="promo">
+<div class="promo" style="background-image: url(../assets/images/content/promo-bg.png);">
 	<div class="container">
 		<h1 class="visually-hidden">Vikiparts</h1>
-		<div class="swiper promo-slider">
+		<div class="swiper promo-slider promo__slider">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">
+				<div class="swiper-slide promo-slider__item">
 					<div class="promo__title">
 						Наша компания – надежный проводник на рынке автозапчастей!
 					</div>
@@ -13,11 +13,12 @@
 					</p>
 					@@include('blocks/button/button.html', {
 					"href": "#",
+					"class": "promo__btn",
 					"style": "bg-black",
 					"text": "Подробнее"
 					})
 				</div>
-				<div class="swiper-slide">
+				<div class="swiper-slide promo-slider__item">
 					<div class="promo__title">
 						Наша компания – надежный проводник на рынке автозапчастей!
 					</div>
@@ -27,11 +28,12 @@
 					</p>
 					@@include('blocks/button/button.html', {
 					"href": "#",
+					"class": "promo__btn",
 					"style": "bg-black",
 					"text": "Подробнее"
 					})
 				</div>
-				<div class="swiper-slide">
+				<div class="swiper-slide promo-slider__item">
 					<div class="promo__title">
 						Наша компания – надежный проводник на рынке автозапчастей!
 					</div>
@@ -41,11 +43,13 @@
 					</p>
 					@@include('blocks/button/button.html', {
 					"href": "#",
+					"class": "promo__btn",
 					"style": "bg-black",
 					"text": "Подробнее"
 					})
 				</div>
 			</div>
 		</div>
+		<div class="swiper-pagination"></div>
 	</div>
 </div>

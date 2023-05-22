@@ -1,3 +1,14 @@
 <div id="burger-menu" class="burger-menu">
-	<button class="burger-menu__close" type="button"></button>
+	<button class="burger-menu__close" type="button">&times;</button>
+	@@include('blocks/menu/menu.html', {
+	"class": "burger-menu__nav"
+	})
+	<div class="burger-menu__address">Минский район, Новодворский сельсовет 40, пом.14</div>
+	@@include('blocks/button/button.html', {
+	"href": "mailto:zakaz@vikiparts.by",
+	"class": "burger-menu__email",
+	"style": "link",
+	"text": "zakaz@vikiparts.by"
+	})
+	<div class="burger-menu__schedule">Прием заказов с 8:00 до 21:00</div>
 </div>

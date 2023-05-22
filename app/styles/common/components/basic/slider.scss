@@ -1,37 +1,31 @@
-.swiper-button {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	position: static;
+	display: flex;
+	/* bottom: 0;
+	left: rem(-14); */
+}
 
-	&-prev,
-	&-next {
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 rem(14);
+	width: rem(14);
+	height: rem(14);
+	border: 1px solid #B2BBC0;
+	background-color: transparent;
+	opacity: 1;
+	transition: var(--transition) background-color,
+		var(--transition) border-color;
 
-		&:after {
-			content: '';
-			//@include position-center('xy');
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-
-				svg {}
-			}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #B2BBC0;
 		}
 	}
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-	@include flex-center-x;
-	bottom: 0;
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+	background-color: var(--black);
+	border-color: var(--black);
 }
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {}
-
-/* .swiper-pagination-current,
-.swiper-pagination-total {
-    &:before {
-        content: '0'; // если хотим нумерацию 01, 02, 03, ...
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-} */

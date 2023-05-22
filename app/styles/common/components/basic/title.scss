@@ -1,12 +1,13 @@
 .title {
 	@include font-size(30, 40);
 	font-weight: 600;
+
+	@include media('767', max) {
+		font-size: rem(20);
+	}
 }
 
 .section-top {
-	@include flex-center-between;
-	flex-wrap: wrap;
-
 	&--with {
 		&_bg {
 			@include padding-y(rem(20));

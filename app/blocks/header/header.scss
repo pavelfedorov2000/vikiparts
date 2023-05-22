@@ -1,17 +1,6 @@
 .header {
-
-	padding-top: rem(13);
 	background-color: var(--dark);
 	color: var(--white);
-	// .header__top
-
-	&__top {
-		@include flex-center-between;
-
-		>* {
-			@include padding-x(rem(14));
-		}
-	}
 
 	// .header__address
 
@@ -22,7 +11,39 @@
 	}
 
 	&__email {
-		text-decoration: underline;
+		display: none;
+
+		@include media('768', min) {
+			display: block;
+			text-decoration: underline;
+		}
+
+		@include media('1024', max) {
+			margin-left: auto;
+		}
+
+		@include media('1025', min) {
+			grid-area: email;
+			justify-self: center;
+		}
+	}
+
+	&__address {
+		display: none;
+
+		@include media('1025', min) {
+			display: block;
+			grid-area: address;
+		}
+	}
+
+	&__schedule {
+		display: none;
+
+		@include media('1025', min) {
+			display: block;
+			grid-area: schedule;
+		}
 	}
 
 	// .header__contacts
@@ -30,6 +51,15 @@
 	&__contacts {
 		@include flex-center-y;
 		gap: rem(10);
+
+		@include media('1025', min) {
+			grid-area: contacts;
+			justify-self: end;
+		}
+
+		@include media('767', max) {
+			margin-left: auto;
+		}
 	}
 
 	&__contacts-drop {
@@ -50,26 +80,68 @@
 	}
 
 	&__phone {
-		@include font-size(18, 38);
-		font-weight: 600;
+		display: none;
+
+		@include media('768', min) {
+			display: block;
+			@include font-size(18, 38);
+			font-weight: 600;
+		}
 	}
 
 	// .header__main
 
 	&__main {
-		@include flex-center-y;
-		gap: rem(8);
+		padding-top: rem(13);
+
+		@include media('1025', min) {
+			display: grid;
+			gap: rem(8);
+			align-items: center;
+			grid-template-columns: rem(215) auto 1fr 1fr 1fr auto;
+			grid-template-areas: 'address address email schedule contacts contacts'
+				'logo menu menu menu menu search'
+			;
+		}
+
+		@include media('1024', max) {
+			@include flex-center-between;
+			gap: rem(18);
+			padding: rem(15) 0;
+		}
+
+		@include media('767', max) {
+			gap: rem(10);
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		@include media('1025', min) {
+			display: block;
+			flex-grow: 1;
+			grid-area: menu;
+		}
 	}
 
 	&__logo {
-		width: rem(215);
-		height: rem(90);
+		flex-shrink: 0 0 rem(215);
+		aspect-ratio: 215 / 90;
+
+		@include media('767', max) {
+			flex-shrink: 0 0 rem(90);
+		}
+
+		@include media('1025', min) {
+			grid-area: logo;
+		}
 	}
 
 	&__search {
-		margin-left: auto;
 		flex-shrink: 0;
-		padding: rem(5);
+		padding: rem(10);
+		@include flex-center;
 
 		svg {
 			width: rem(29);

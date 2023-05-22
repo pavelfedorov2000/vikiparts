@@ -13,31 +13,35 @@
 		"listItem": true,
 		"class": "menu__link",
 		"style": "link",
-		"text": "Транспортные услуги",
+		"text": "@@if(!context.isFooter){Транспортные услуги}@@if(context.isFooter){Карьера и сотрудничество}",
 		}, {
 		"href": "#",
 		"listItem": true,
 		"class": "menu__link",
 		"style": "link",
-		"text": "Наш блог",
+		"text": "@@if(!context.isFooter){Наш блог}@@if(context.isFooter){Новости}",
 		}, {
 		"href": "#",
 		"listItem": true,
 		"class": "menu__link",
 		"style": "link",
-		"text": "Карьера",
-		}, {
+		"text": "@@if(!context.isFooter){Карьера}@@if(context.isFooter){Транспортные услуги}",
+		}])
+		@@if(!context.isFooter){
+		@@include('blocks/button/button.html', {
 		"href": "#",
 		"listItem": true,
 		"class": "menu__link",
 		"style": "link",
 		"text": "Сотрудничество",
-		}, {
+		})
+		}
+		@@include('blocks/button/button.html', {
 		"href": "#",
 		"listItem": true,
 		"class": "menu__link",
 		"style": "link",
 		"text": "Контакты",
-		}])
+		})
 	</ul>
 </nav>

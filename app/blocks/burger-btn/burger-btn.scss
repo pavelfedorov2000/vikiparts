@@ -1,3 +1,20 @@
 .burger-btn {
 	display: none;
+	background-color: transparent;
+	border: none;
+	flex-shrink: 0;
+	width: rem(30);
+	height: rem(27);
+	flex-direction: column;
+	justify-content: space-between;
+
+	@include media('1024', max) {
+		display: flex;
+	}
+
+	span {
+		width: 100%;
+		height: rem(3);
+		background-color: var(--white);
+	}
 }

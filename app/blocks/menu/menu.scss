@@ -1,11 +1,19 @@
 .menu {
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
+
+		@include media('1025', min) {
+			justify-content: space-between;
+		}
 	}
 
 	&__link {
-		@include padding-x(rem(10));
+		@include flex-center-y;
+		gap: rem(7);
+		padding: rem(10);
 		@include font-size(18, 22);
+		color: var(--white);
 
 		svg {
 			width: rem(11);

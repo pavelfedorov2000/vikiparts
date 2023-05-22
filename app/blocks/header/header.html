@@ -1,14 +1,23 @@
 <header class="header">
 	<div class="container">
-		<address class="header__top">
+		<div class="header__main">
 			<div class="header__address">Минский район, Новодворский сельсовет 40, пом.14</div>
+			<div class="header__schedule">Прием заказов с 8:00 до 21:00</div>
+			@@include("blocks/logo/logo.html", {
+			"class": "header__logo",
+			"src": "assets/images/logo/logo",
+			"width": "215",
+			"height": "90"
+			})
+			@@include('blocks/menu/menu.html', {
+			"class": "header__menu"
+			})
 			@@include('blocks/button/button.html', {
 			"href": "mailto:zakaz@vikiparts.by",
 			"class": "header__email",
 			"style": "link",
 			"text": "zakaz@vikiparts.by"
 			})
-			<div class="header__schedule">Прием заказов с 8:00 до 21:00</div>
 			<div class="header__contacts">
 				@@loop('blocks/button/button.html', [{
 				"href": "tel:+375334552319",
@@ -39,22 +48,12 @@
 				"icon": "drop-arrow"
 				}])
 			</div>
-		</address>
-		<div class="header__main">
-			@@include("blocks/logo/logo.html", {
-			"class": "header__logo",
-			"src": "assets/images/logo/logo",
-			"width": "215",
-			"height": "90"
-			})
-			@@include('blocks/menu/menu.html', {
-			"class": "header__menu"
-			})
 			@@include('blocks/button/button.html', {
 			"class": "js-open-search header__search",
 			"icon": "search",
 			"transparent": "true"
 			})
+			@@include('blocks/burger-btn/burger-btn.html')
 		</div>
 	</div>
 </header>

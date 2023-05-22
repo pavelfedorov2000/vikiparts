@@ -1,10 +1,20 @@
 .features {
 	@include grid-auto-fit(rem(315), rem(20));
+	align-items: flex-start;
+
+	@include media('500', max) {
+		@include grid-auto-fit(rem(290), rem(20));
+	}
 }
 
 .feature {
 	@include row-grid(rem(9));
 	justify-items: center;
+
+	@include media('767', max) {
+		text-align: center;
+	}
+
 	// .feature__img
 
 	&__img {

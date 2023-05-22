@@ -1,7 +1,8 @@
-<label class="checkbox@@if(context.class){ @@class}@@if(context.style){ checkbox--style_@@style}@@if(context.size){ checkbox--size_@@size}">
-    <input class="checkbox__input" type="checkbox"@@if(context.isChecked){ checked}>
-    <span class="checkbox__style"></span>
-    @@if(context.text){
-        <span class="checkbox__text">@@text</span>
-    }
+<label
+	class="checkbox@@if(context.class){ @@class}@@if(context.style){ checkbox--style_@@style}@@if(context.size){ checkbox--size_@@size}">
+	<input class="checkbox__input" type="checkbox" @@if(context.isChecked){ checked} @@if(context.required){required}>
+	<span class="checkbox__style"></span>
+	@@if(context.text){
+	<span class="checkbox__text">@@text</span>
+	}
 </label>

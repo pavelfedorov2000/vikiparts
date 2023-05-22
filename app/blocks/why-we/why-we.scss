@@ -35,8 +35,16 @@
 	// .why-we__list
 
 	&__list {
-		@include grid(rem(4), 0, 0);
-		grid-auto-rows: minmax(rem(301), auto);
+		display: grid;
+
+		@include media('501', min) {
+			grid-auto-rows: minmax(rem(301), auto);
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media('1025', min) {
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 
 	// .why-we__item
@@ -60,6 +68,10 @@
 	&__item-text {
 		@include font-size(20, 24);
 		font-weight: 600;
+
+		@include media('500', max) {
+			font-size: rem(18);
+		}
 	}
 
 	&__item-img {
@@ -86,14 +98,14 @@
 		&--2 {
 			#{$this} {
 				&__item-img {
-					bottom: rem(56);
+					top: rem(84);
 					left: rem(56);
 					width: rem(161);
 					height: rem(161);
 				}
 
 				&__item-text {
-					margin-top: auto;
+					padding-top: rem(130);
 				}
 			}
 		}
@@ -103,7 +115,13 @@
 		}
 
 		&--5 {
-			grid-column: span 2;
+			@include media('501', min) {
+				grid-column: span 2;
+			}
+
+			@include media('500', max) {
+				padding-bottom: rem(200);
+			}
 
 			#{$this} {
 				&__item-img {
@@ -114,13 +132,18 @@
 				}
 
 				&__item-text {
-					align-self: end;
-					max-width: rem(350);
+
+					@include media('501', min) {
+						align-self: end;
+						padding-left: rem(194);
+					}
 				}
 			}
 		}
 
 		&--7 {
+			padding-bottom: rem(165);
+
 			#{$this} {
 				&__item-img {
 					right: rem(19);

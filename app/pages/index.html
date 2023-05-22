@@ -1,54 +1,46 @@
-@@include("blocks/head/head.html", {"title": "Разводящая"})
+@@include("blocks/head/head.html", {"title": "Главная"})
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    <main class="page">
-        <div class="_progress">
-            <div class="_progress__inner">
-                @@loop("blocks/progress/progress.html", "../resources/assets/pages.json")
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
+	@@include('blocks/burger-menu/burger-menu.html')
+	@@include("blocks/header/header.html")
+	<main class="page">
+		@@include("blocks/promo/promo.html")
+		@@include('blocks/about-section/about-section.html')
+		@@include('blocks/why-we/why-we.html')
+		@@loop('blocks/why-choose-us/why-choose-us.html', [{
+		"title": "Почему клиенты выбирают нас?",
+		"item1": {
+		"src": "assets/images/content/benefits/01",
+		"text": "За время работы зарекомендовали себя в качестве надежного партнера для поставщиков и покупателей"
+		},
+		"item2": {
+		"src": "assets/images/content/benefits/02",
+		"text": "Высокий уровень автоматизации всех процессов"
+		},
+		"item3": {
+		"src": "assets/images/content/benefits/03",
+		"text": "Круглосуточно оказываем техническую и информационную поддержку"
+		}
+		}, {
+		"title": "Почему поставщики выбирают нас?",
+		"item1": {
+		"src": "assets/images/content/benefits/11",
+		"text": "У нас наработанная клиентская база, которая проглотит любое предложение."
+		},
+		"item2": {
+		"src": "assets/images/content/benefits/12",
+		"text": "Мы следим за статистикой и информируем вас о новых возможностях повышения продаж."
+		},
+		"item3": {
+		"src": "assets/images/content/benefits/13",
+		"text": "Следим за новыми тенденциями на рынке и постоянно запускаем новые механизмы продаж в работу."
+		}
+		}])
+	</main>
+	@@include('blocks/feedback/feedback.html')
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
 </div>
 @@include("blocks/link/link.html")
-<style>
-    ._progress {
-        min-height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10rem 0;
-    }
-
-    @media (max-width: 767px) {
-        ._progress {
-            padding: 5rem 0;
-        }
-    }
-
-    @media (min-width: 768px) {
-        ._progress__inner {
-            columns: 2;
-        }
-    }
-
-    ._progress__link {
-        display: block;
-        font-size: 1.5vmax;
-        margin-bottom: 10px;
-        font-weight: 700;
-        color: #222;
-        text-decoration: none;
-        transition: opacity 0.3s;
-    }
-
-    ._progress__link:hover {
-        color: var(--accent);
-        opacity: 0.5;
-    }
-
-</style>
 </body>
 
 </html>

@@ -9,6 +9,10 @@
 
 .benefits-list {
 	@include grid-auto-fit(rem(350), rem(15));
+
+	@include media('500', max) {
+		@include grid-auto-fit(rem(290), rem(15));
+	}
 }
 
 .benefit-item {

@@ -5,6 +5,11 @@
 	color: var(--white);
 	background-image: url(../images/content/form-bg.jpg);
 	@include bg(cover);
+
+	@include media('767', max) {
+		@include padding-y(rem(30));
+	}
+
 	// .feedback__form
 
 	&__form {
@@ -29,6 +34,10 @@
 	&__agree,
 	&__required {
 		@include font-size(14, 17);
+
+		@include media('500', max) {
+			font-size: rem(11);
+		}
 	}
 }
 

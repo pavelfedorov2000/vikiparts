@@ -1,15 +1,18 @@
 <footer class="footer">
 	<div class="footer__top">
-		<div class="container footer__top-inner">
-			@@include("blocks/logo/logo.html", {
-			"class": "footer__logo",
-			"src": "assets/images/logo/logo",
-			"width": "239",
-			"height": "100"
-			})
-			@@include('blocks/menu/menu.html', {
-			"class": "footer__menu"
-			})
+		<div class="container">
+			<div class="footer__top-inner">
+				@@include("blocks/logo/logo.html", {
+				"class": "footer__logo",
+				"src": "assets/images/logo/logo",
+				"width": "239",
+				"height": "100"
+				})
+				@@include('blocks/menu/menu.html', {
+				"isFooter": "true",
+				"class": "footer__menu"
+				})
+			</div>
 		</div>
 	</div>
 	<div class="footer__main">
@@ -80,7 +83,7 @@
 					@@include('blocks/button/button.html', {
 					"class": "footer__btn",
 					"style": "bg-black",
-					"text": "Заказть звонок"
+					"text": "Заказать звонок"
 					})
 				</section>
 				<section class="footer__col footer__menu-1">
@@ -155,7 +158,7 @@
 						})
 					</div>
 					<div class="footer__developer-text">
-						Разработка сайта ZmitroC.by™
+						Разработка сайта <a href="#">ZmitroC.by</a><sup>TM</sup>
 					</div>
 				</div>
 			</div>
