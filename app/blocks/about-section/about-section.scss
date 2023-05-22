@@ -1,0 +1,54 @@
+.about-section {
+	padding: rem(30) 0;
+	background-color: var(--gray-3);
+	// .about-section__grid
+
+	&__grid {
+		display: grid;
+		grid-template-columns: calc(555 / var(--container-width) * 100%) calc(584 / var(--container-width) * 100%);
+		grid-template-rows: repeat(3, auto);
+		gap: rem(11) rem(33);
+
+		@include media('1025', min) {
+			grid-template-areas:
+				'picture title'
+				'picture text'
+				'features features'
+			;
+		}
+	}
+
+	&__picture {
+		aspect-ratio: 555 / 350;
+
+		@include media('1025', min) {
+			grid-area: picture;
+		}
+	}
+
+	// .about-section__title
+
+	&__title {
+		@include media('1025', min) {
+			grid-area: title;
+		}
+	}
+
+	// .about-section__text
+
+	&__text {
+		@include font-size(20, 30);
+
+		@include media('1025', min) {
+			grid-area: text;
+		}
+	}
+
+	&__items {
+		margin-top: rem(24);
+
+		@include media('1025', min) {
+			grid-area: features;
+		}
+	}
+}

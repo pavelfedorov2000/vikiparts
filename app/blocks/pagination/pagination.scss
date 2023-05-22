@@ -1,0 +1,50 @@
+.pagination {
+	display: flex;
+    justify-content: center;
+
+	// .pagination__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .pagination__item
+
+	&__item {
+		
+	}
+
+	// .pagination__link
+
+	&__link {
+
+		&.active {
+			
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				
+			}
+		}
+	}
+
+	&__prev,
+	&__next {
+		@media (any-hover: hover) {
+			&:hover {
+				
+			}
+		}
+	}
+
+	&__prev {
+		
+	}
+
+	// .pagination__next
+
+	&__next {
+		
+	}
+}

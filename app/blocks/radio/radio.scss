@@ -1,0 +1,31 @@
+.radiobutton {
+	$this: &; // .radio
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__input {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
+
+		&:checked~#{$this} {
+			&__style {
+				&:before {
+					content: '';
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	&__style {
+		position: relative;
+		flex-shrink: 0;
+	}
+
+	&__text {}
+}

@@ -1,0 +1,60 @@
+<header class="header">
+	<div class="container">
+		<address class="header__top">
+			<div class="header__address">Минский район, Новодворский сельсовет 40, пом.14</div>
+			@@include('blocks/button/button.html', {
+			"href": "mailto:zakaz@vikiparts.by",
+			"class": "header__email",
+			"style": "link",
+			"text": "zakaz@vikiparts.by"
+			})
+			<div class="header__schedule">Прием заказов с 8:00 до 21:00</div>
+			<div class="header__contacts">
+				@@loop('blocks/button/button.html', [{
+				"href": "tel:+375334552319",
+				"class": "header__phone",
+				"style": "link",
+				"text": "+375 (33) 455-23-19"
+				}, {
+				"href": "https://t.me/",
+				"target": "_blank",
+				"style": "messanger",
+				"img": {
+				"picture": "false",
+				"src": "assets/images/icons/tg",
+				"alt": "telegram"
+				}
+				}, {
+				"href": "viber://chat?number=%2B375334552319",
+				"target": "_blank",
+				"style": "messanger",
+				"img": {
+				"picture": "false",
+				"src": "assets/images/icons/viber",
+				"alt": "viber"
+				}
+				}, {
+				"class": "header__contacts-drop",
+				"transparent": true,
+				"icon": "drop-arrow"
+				}])
+			</div>
+		</address>
+		<div class="header__main">
+			@@include("blocks/logo/logo.html", {
+			"class": "header__logo",
+			"src": "assets/images/logo/logo",
+			"width": "215",
+			"height": "90"
+			})
+			@@include('blocks/menu/menu.html', {
+			"class": "header__menu"
+			})
+			@@include('blocks/button/button.html', {
+			"class": "js-open-search header__search",
+			"icon": "search",
+			"transparent": "true"
+			})
+		</div>
+	</div>
+</header>

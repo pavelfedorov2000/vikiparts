@@ -1,0 +1,101 @@
+.btn {
+	$this: &;
+
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	font-family: var(--main-font);
+	transition: var(--transition) color,
+		var(--transition) background-color;
+	color: currentColor;
+
+	@media (any-hover: hover) {
+		&:hover {
+			//background-color: var(--accent-hover);
+			//color: #fff;
+		}
+	}
+
+	&.disabled,
+	&[disabled] {
+		//background-color: var(--disabled);
+		border: none;
+		cursor: not-allowed;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	svg,
+	.icon,
+	&__icon {
+		flex-shrink: 0;
+		transition: var(--transition) fill;
+	}
+
+	&__text {}
+
+	&--primary {
+		background-color: var(--accent);
+		color: var(--white);
+	}
+
+	&--style {
+		&_bg {
+
+			&-black,
+			&-accent {
+				@include font-size(18, 27);
+				border-radius: var(--brs);
+				color: var(--white);
+			}
+
+			&-black {
+				background-color: var(--black);
+
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--accent);
+					}
+				}
+			}
+
+			&-accent {
+				background-color: var(--accent);
+			}
+		}
+
+		&_messanger {
+			width: rem(17);
+			height: rem(17);
+			transition: var(--transition) transform;
+
+			@media (any-hover: hover) {
+				&:hover {
+					transform: translateY(-3px);
+				}
+			}
+		}
+
+		&_link {
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+
+	&--transparent {
+		background-color: transparent;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}

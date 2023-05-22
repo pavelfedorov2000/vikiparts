@@ -1,0 +1,47 @@
+:root {
+	--white: #fff;
+	--black: #000;
+	--accent: #E0A100;
+	--dark: #272425;
+	--gray: #D9D9D9;
+	--gray-2: #A0A0A0;
+	--gray-3: #F5F5F5;
+	--gray-4: #757575;
+
+	//--mob-padding: rem(12;
+	//--gap: rem();
+	--container-width: #{rem(1200)};
+	--container-padding: #{rem(15)};
+	//--header-height: 9.6rem;
+	//--section-padding: 8rem;
+	//--section-padding-xl: 8.8rem;
+
+	// offsets (gaps)
+	/* --offset-xxxl: 6.4rem;
+	--offset-xxl: 5.6rem;
+	--offset-xls: 4rem;
+	--offset-xl: 4.8rem;
+	--offset-l: 3.2rem;
+	--offset-m: 2.4rem;
+	--offset-s: 1.6rem;
+	--offset-xs: 1.2rem;
+	--offset-xxs: 0.8rem;
+	--offset-xxxs: 0.4rem; */
+
+	--base-font-size: 16;
+	--main-font: 'Montserrat', sans-serif;
+	--color-default: var(--black);
+
+	--transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+	--duration300ms: 0.3s;
+	--duration500ms: 0.5s;
+	--duration1s: 1s;
+	--delay: var(--duration300ms);
+	--transition: var(--duration300ms) var(--transition-timing);
+	--transition-long: var(--duration1s) var(--transition-timing);
+
+	--border: 1px solid var(--line-color);
+	//--bsh: ;
+	--brs: 25px;
+	//--brs-card: 12px;
+}

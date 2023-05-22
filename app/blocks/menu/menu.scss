@@ -1,0 +1,16 @@
+.menu {
+	&__list {
+		display: flex;
+	}
+
+	&__link {
+		@include padding-x(rem(10));
+		@include font-size(18, 22);
+
+		svg {
+			width: rem(11);
+			height: rem(11);
+			fill: var(--white);
+		}
+	}
+}

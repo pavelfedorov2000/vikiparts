@@ -1,0 +1,37 @@
+.swiper-button {
+
+	&-prev,
+	&-next {
+
+		&:after {
+			content: '';
+			//@include position-center('xy');
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+
+				svg {}
+			}
+		}
+	}
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	@include flex-center-x;
+	bottom: 0;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {}
+
+/* .swiper-pagination-current,
+.swiper-pagination-total {
+    &:before {
+        content: '0'; // если хотим нумерацию 01, 02, 03, ...
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+} */

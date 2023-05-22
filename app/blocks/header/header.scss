@@ -1,0 +1,88 @@
+.header {
+
+	padding-top: rem(13);
+	background-color: var(--dark);
+	color: var(--white);
+	// .header__top
+
+	&__top {
+		@include flex-center-between;
+
+		>* {
+			@include padding-x(rem(14));
+		}
+	}
+
+	// .header__address
+
+	&__address,
+	&__schedule,
+	&__email {
+		@include font-size(14, 17);
+	}
+
+	&__email {
+		text-decoration: underline;
+	}
+
+	// .header__contacts
+
+	&__contacts {
+		@include flex-center-y;
+		gap: rem(10);
+	}
+
+	&__contacts-drop {
+		svg {
+			width: rem(11);
+			height: rem(11);
+			fill: var(--white);
+			transition: var(--transition) fill;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: var(--accent);
+				}
+			}
+		}
+	}
+
+	&__phone {
+		@include font-size(18, 38);
+		font-weight: 600;
+	}
+
+	// .header__main
+
+	&__main {
+		@include flex-center-y;
+		gap: rem(8);
+	}
+
+	&__logo {
+		width: rem(215);
+		height: rem(90);
+	}
+
+	&__search {
+		margin-left: auto;
+		flex-shrink: 0;
+		padding: rem(5);
+
+		svg {
+			width: rem(29);
+			height: rem(29);
+			fill: var(--white);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: var(--accent);
+				}
+			}
+		}
+	}
+}

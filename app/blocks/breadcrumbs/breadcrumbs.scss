@@ -1,0 +1,22 @@
+.breadcrumbs {
+	&__item {
+		position: relative;
+
+		@media (any-hover: hover) {
+			&:hover {
+				
+			}
+		}
+
+		span {
+			
+		}
+
+		&:not(:last-child) {
+			&:after {
+				content: '';
+                right: 0;
+			}
+		}
+	}
+}

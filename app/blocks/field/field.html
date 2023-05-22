@@ -1,0 +1,12 @@
+<label class="field@@if(context.class){ @@class}@@if(context.style){ field--style_@@style}">
+	@@if(context.textarea){
+	<textarea class="input" @@if(context.name){name="@@name" } @@if(context.id){id="@@id" }
+		@@if(context.placeholder){placeholder="@@placeholder@@if(context.required){*}"
+		}@@if(context.required){required}></textarea>
+	}
+	@@if(!context.textarea){
+	<input class="input" @@if(context.name){name="@@name" } @@if(context.type){type="@@type" }
+		@@if(context.placeholder){placeholder="@@placeholder@@if(context.required){*}" }
+		@@if(context.required){required}>
+	}
+</label>

@@ -1,0 +1,64 @@
+.checkbox {
+	$this: &; // .checkbox
+
+	@include flex-center-y;
+
+	&__input {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
+
+		&:checked~#{$this} {
+			&__style {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background-image: url(../images/icons/check.svg);
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+
+	&__style {
+		position: relative;
+		flex-shrink: 0;
+		margin-right: rem(11);
+		width: rem(18);
+		height: rem(18);
+		border: 1px solid var(--white);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: rem(13);
+			height: rem(10);
+			background-image: url(../images/icons/check.svg);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__text {
+		a {
+			transition: var(--transition) color;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+}

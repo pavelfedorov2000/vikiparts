@@ -1,0 +1,23 @@
+<section class="about-section">
+	<div class="container">
+		<div class="about-section__grid">
+			<h2 class="title about-section__title">О нашей компании</h2>
+			@@include('blocks/img/img.html', {
+			"cover": true,
+			"class": "about-section__picture",
+			"src": "assets/images/content/about",
+			"width": "555",
+			"height": "350"
+			})
+			<p class="about-section__text">
+				Мы динамичная и развивающаяся Компания, специализирующаяся на оптовой торговле автозапчастями, маслами и
+				автокосметикой по системе кросс-докинга.
+				Наша история началась в 2015 году и по сей день мы постоянно совершенствуем процессы, работаем над
+				повышением компетентности команды и ставим самые амбициозные цели.
+			</p>
+			@@include('blocks/features/features.html', {
+			"class": "about-section__items"
+			})
+		</div>
+	</div>
+</section>

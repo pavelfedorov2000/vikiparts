@@ -1,0 +1,80 @@
+.feedback {
+	padding: rem(43) 0 rem(83);
+	min-height: rem(403);
+	background-color: var(--black);
+	color: var(--white);
+	background-image: url(../images/content/form-bg.jpg);
+	@include bg(cover);
+	// .feedback__form
+
+	&__form {
+		@include media('1025', min) {
+			width: rem(725);
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: rem(42);
+
+		@include media('767', max) {
+			margin-bottom: rem(25);
+		}
+	}
+}
+
+.form {
+
+	&__agree,
+	&__required {
+		@include font-size(14, 17);
+	}
+}
+
+.feedback-form {
+	display: grid;
+	gap: rem(20);
+
+	@include media('768', min) {
+		grid-template-columns: 1fr auto;
+		grid-template-areas:
+			'fields fields'
+			'agree submit'
+			'required submit'
+		;
+	}
+
+	&__fields {
+		display: grid;
+		gap: rem(16) rem(28);
+
+		@include media('768', min) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-area: fields;
+		}
+	}
+
+	&__agree {
+		@include media('768', min) {
+			grid-area: agree;
+		}
+	}
+
+	// .feedback-form__required
+
+	&__required {
+		@include media('768', min) {
+			grid-area: required;
+		}
+	}
+
+	&__btn {
+		padding: rem(11.5) rem(44.25);
+
+		@include media('768', min) {
+			grid-area: submit;
+			align-self: start;
+		}
+	}
+}

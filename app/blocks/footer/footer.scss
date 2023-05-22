@@ -1,0 +1,178 @@
+.footer {
+	// .footer__top
+
+	&__top {
+		background-color: var(--dark);
+		color: var(--white);
+	}
+
+	&__top-inner {
+		@include media('1025', min) {
+			align-items: center;
+			grid-template-areas:
+				'logo menu menu menu'
+			;
+		}
+	}
+
+	&__logo {
+		@include media('1025', min) {
+			grid-area: logo;
+		}
+	}
+
+	&__menu {
+		@include media('1025', min) {
+			grid-area: menu;
+		}
+	}
+
+	// .footer__main
+
+	&__main {
+		background-color: var(--gray);
+	}
+
+	// .footer__main-inner
+
+	&__top-inner,
+	&__main-inner {
+		display: grid;
+		grid-template-columns: calc(282 / var(--container-width) * 100%) repeat(3, 1fr);
+		gap: rem(16);
+	}
+
+	&__main-inner {
+		@include media('1025', min) {
+			grid-template-areas:
+				'contacts call menu-1 menu-2'
+				'copy . . developer'
+			;
+		}
+	}
+
+	// .footer__col
+
+	&__col {
+		@include flex-column-start;
+
+		&--contacts {
+			@include media('768', min) {
+				grid-area: contacts;
+			}
+		}
+
+		&--call {
+			@include media('768', min) {
+				grid-area: call;
+			}
+		}
+	}
+
+	// .footer__title
+
+	&__title {
+		margin-bottom: rem(8);
+		font-weight: 600;
+	}
+
+	&__title,
+	&__link {
+		@include font-size(14, 31);
+	}
+
+	&__address {
+		@include media('768', min) {
+			max-width: rem(256);
+		}
+	}
+
+	// .footer__address
+
+	&__address,
+	&__schedule,
+	&__email,
+	&__contact {
+		@include font-size(14, 17);
+	}
+
+	// .footer__schedule
+
+	&__schedule {
+		>div {
+			display: flex;
+			gap: 2px;
+		}
+
+		dt {
+			font-weight: 500;
+		}
+	}
+
+	// .footer__contacts
+
+	&__contacts {
+		@include row-grid(rem(8));
+		margin-bottom: rem(22);
+	}
+
+	// .footer__contact
+
+	&__contact {}
+
+	&__btn {
+		padding: rem(11.5) rem(18);
+	}
+
+	// .footer__menu
+
+	&__menu {
+		&-1 {
+			@include media('768', min) {
+				grid-area: menu-1;
+			}
+		}
+
+		&-2 {
+			@include media('768', min) {
+				grid-area: menu-2;
+			}
+		}
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		@include font-size(14, 25);
+
+		@include media('768', min) {
+			grid-area: copy;
+		}
+	}
+
+	// .footer__developer
+
+	&__developer {
+		@include flex-center-y;
+
+		@include media('768', min) {
+			grid-area: developer;
+		}
+	}
+
+	// .footer__developer-logo
+
+	&__developer-logo {
+		flex-shrink: 0;
+		margin-right: rem(5);
+		width: rem(15);
+		height: rem(15);
+		background-color: #8ABE2E;
+	}
+
+	// .footer__developer-text
+
+	&__developer-text {
+		@include font-size(12, 20);
+	}
+}

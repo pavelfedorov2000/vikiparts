@@ -1,0 +1,16 @@
+.title {
+	@include font-size(30, 40);
+	font-weight: 600;
+}
+
+.section-top {
+	@include flex-center-between;
+	flex-wrap: wrap;
+
+	&--with {
+		&_bg {
+			@include padding-y(rem(20));
+			background-color: var(--gray);
+		}
+	}
+}
