@@ -10,8 +10,23 @@
 
 	&__item {
 		position: relative;
+        @include flex-center-y;
+
+        svg {
+			width: rem(11);
+			height: rem(11);
+			fill: var(--white);
+		}
 
 		&:hover {
+            .menu__link {
+                color: var(--white);
+
+				.btn__text::after {
+					width: 100%;
+				}
+            }
+
 			.dropdown {
 				@include show();
 			}
@@ -25,12 +40,6 @@
 		@include font-size(18, 22);
 		color: var(--white);
 
-		svg {
-			width: rem(11);
-			height: rem(11);
-			fill: var(--white);
-		}
-
 		.btn__text {
 			position: relative;
 
@@ -43,16 +52,6 @@
 				height: 1px;
 				background-color: var(--accent);
 				transition: var(--transition) width;
-			}
-		}
-
-		@media (any-hover: hover) {
-			color: var(--white);
-
-			&:hover {
-				.btn__text::after {
-					width: 100%;
-				}
 			}
 		}
 	}

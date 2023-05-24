@@ -48,6 +48,9 @@
 		}
 		}
 		</@@if(!context.href){button}@@if(context.href){a}>
+        @@if(context.outerIcon){
+		@@include('blocks/icons/@@outerIcon.html')
+		}
 		@@if(context.dropdown){
 		<div class="dropdown">
 			<ul class="dropdown__list">

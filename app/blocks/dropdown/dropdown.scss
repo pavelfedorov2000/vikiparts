@@ -34,6 +34,10 @@
 		color: var(--black);
 		transition: var(--transition) background-color;
 
+        @include media('500', max) {
+            @include padding-y(rem(5));
+        }
+
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--gray-3);
