@@ -1,0 +1,11 @@
+<form id="search-form" class="search-form@@if(context.class){ @@class}@@if(context.style){ search-form--style_@@style}">
+	<div class="container search-form__row">
+		<input class="search-form__input" name="search" type="text" placeholder="Поиск по сайту">
+		@@include('blocks/button/button.html', {
+		"type": "submit",
+		"style": "bg-accent",
+		"class": "search-form__btn",
+		"text": "Искать"
+		})
+	</div>
+</form>

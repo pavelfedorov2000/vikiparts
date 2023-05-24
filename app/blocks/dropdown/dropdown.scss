@@ -1,0 +1,63 @@
+.dropdown {
+	$this: &;
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 25;
+	min-width: rem(154);
+	background-color: var(--white);
+	box-shadow: var(--bsh);
+	border-radius: var(--brs-xs);
+	@include hide();
+
+	&__list {
+		li {
+			&:first-child {
+				#{$this}__link {
+					border-radius: var(--brs-xs) var(--brs-xs) 0 0;
+				}
+			}
+
+			&:last-child {
+				#{$this}__link {
+					border-radius: 0 0 var(--brs-xs) var(--brs-xs);
+				}
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		@include padding-x(rem(14));
+		@include font-size(14, 27);
+		color: var(--black);
+		transition: var(--transition) background-color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--gray-3);
+				color: var(--black);
+			}
+		}
+	}
+
+	&__phones {
+		li {
+			@include flex-center-y;
+			gap: rem(8);
+		}
+	}
+
+	&__phone {
+		@include font-size(16, 34);
+		font-weight: 500;
+		color: var(--black);
+	}
+
+	&__messanger {
+		aspect-ratio: 1 / 1;
+		width: rem(18);
+		height: rem(17);
+	}
+}

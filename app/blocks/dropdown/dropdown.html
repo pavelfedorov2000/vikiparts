@@ -1,0 +1,49 @@
+<div class="dropdown@@if(context.class){ @@class}@@if(context.style){ dropdown--style_@@style}">
+	<ul class="dropdown__phones">
+		@@loop('blocks/button/button.html', [{
+		"listItem": true,
+		"href": "tel:+375174552323",
+		"class": "dropdown__phone",
+		"style": "link",
+		"text": "+375 (17) 455-23-23"
+		}, {
+		"listItem": true,
+		"href": "tel:+375174552311",
+		"class": "dropdown__phone",
+		"style": "link",
+		"text": "+375 (17) 455-23-11"
+		}])
+		<li>
+			@@loop('blocks/button/button.html', [{
+			"href": "tel:+375294552313",
+			"class": "dropdown__phone",
+			"style": "link",
+			"text": "+375 (29) 455-23-13"
+			}, {
+			"href": "https://t.me/",
+			"target": "_blank",
+			"class": "dropdown__messanger",
+			"style": "messanger",
+			"img": {
+			"picture": "false",
+			"src": "assets/images/icons/tg",
+			"alt": "telegram",
+			"width": "17",
+			"height": "17"
+			}
+			}, {
+			"href": "viber://chat?number=%2B375294552313",
+			"target": "_blank",
+			"class": "dropdown__messanger",
+			"style": "messanger",
+			"img": {
+			"picture": "false",
+			"src": "assets/images/icons/viber",
+			"alt": "viber",
+			"width": "17",
+			"height": "17"
+			}
+			}])
+		</li>
+	</ul>
+</div>

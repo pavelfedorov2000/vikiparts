@@ -1,0 +1,42 @@
+.search-form {
+	position: absolute;
+	top: 100%;
+	right: -100%;
+	z-index: 30;
+	width: 100%;
+	background-color: var(--gray-3);
+	transition: var(--transition) right;
+
+	&.active {
+		right: 0;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr max-content;
+
+		@include media('1024', max) {
+			@include padding-x(0);
+		}
+	}
+
+	&__input {
+		padding-right: rem(15);
+		@include font-size(16, 24);
+		border: none;
+		background-color: var(--gray-3);
+
+		@include media('1024', max) {
+			padding-left: rem(15);
+		}
+
+		@include media('500', max) {
+			@include font-size(14, 17);
+		}
+	}
+
+	&__btn {
+		padding: rem(15);
+		border-radius: 0;
+	}
+}

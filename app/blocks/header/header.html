@@ -27,33 +27,44 @@
 				}, {
 				"href": "https://t.me/",
 				"target": "_blank",
+				"class": "header__messanger",
 				"style": "messanger",
 				"img": {
 				"picture": "false",
 				"src": "assets/images/icons/tg",
-				"alt": "telegram"
+				"alt": "telegram",
+				"width": "25",
+				"height": "25"
 				}
 				}, {
 				"href": "viber://chat?number=%2B375334552319",
 				"target": "_blank",
+				"class": "header__messanger",
 				"style": "messanger",
 				"img": {
 				"picture": "false",
 				"src": "assets/images/icons/viber",
-				"alt": "viber"
+				"alt": "viber",
+				"width": "25",
+				"height": "25"
 				}
 				}, {
 				"class": "header__contacts-drop",
 				"transparent": true,
-				"icon": "drop-arrow"
+				"icon": "drop-arrow",
+				"dropdown": true,
+				"dropdownClass": "header__contacts-dropdown"
 				}])
 			</div>
 			@@include('blocks/button/button.html', {
-			"class": "js-open-search header__search",
+			"class": "jsSearchBtn header__search",
 			"icon": "search",
-			"transparent": "true"
+			"transparent": "true",
+			"expanded": true,
+			"ariaControls": "search-form"
 			})
 			@@include('blocks/burger-btn/burger-btn.html')
 		</div>
 	</div>
+	@@include('blocks/search-form/search-form.html')
 </header>

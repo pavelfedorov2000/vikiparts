@@ -69,8 +69,8 @@
 		}
 
 		&_messanger {
-			width: rem(17);
-			height: rem(17);
+			display: inline-block;
+			border-radius: 50%;
 			transition: var(--transition) transform;
 
 			@media (any-hover: hover) {

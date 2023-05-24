@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
     app.burger.init();
+    app.search.init();
     new Swiper('.promo-slider', {
         loop: true,
         slidesPerView: 1,
@@ -22,17 +23,4 @@ window.addEventListener("DOMContentLoaded", () => {
             },
         }, */
     });
-
-    /* const searchForm = document.querySelector('.search-form');
-    const searchInput = searchForm.querySelector('.search-form__input');
-    const searchBtn = document.querySelector('.header__search-btn');
-    searchBtn.addEventListener('click', function () {
-        searchForm.classList.add('active');
-    });
-    
-    document.addEventListener('mouseup', (e) => {
-        if (searchForm != e.target && searchInput != e.target) {
-            searchForm.classList.remove('active');
-        }
-    }); */
 });

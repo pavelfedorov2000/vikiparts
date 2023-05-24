@@ -1,4 +1,7 @@
 .header {
+	$this: &;
+
+	position: relative;
 	background-color: var(--dark);
 	color: var(--white);
 
@@ -13,19 +16,20 @@
 	&__email {
 		display: none;
 
-		@include media('768', min) {
+		@include media('1025', min) {
 			display: block;
 			text-decoration: underline;
-		}
-
-		@include media('1024', max) {
-			margin-left: auto;
-		}
-
-		@include media('1025', min) {
 			grid-area: email;
+		}
+
+		@include media('1201', min) {
 			justify-self: center;
 		}
+	}
+
+	&__messanger {
+		width: rem(26);
+		height: rem(25);
 	}
 
 	&__address {
@@ -57,12 +61,26 @@
 			justify-self: end;
 		}
 
+		@include media('1024', max) {
+			margin-left: auto;
+		}
+
 		@include media('767', max) {
 			margin-left: auto;
+		}
+
+		&:hover {
+			#{$this} {
+				&__contacts-dropdown {
+					@include show();
+				}
+			}
 		}
 	}
 
 	&__contacts-drop {
+		position: relative;
+
 		svg {
 			width: rem(11);
 			height: rem(11);
@@ -76,6 +94,17 @@
 					fill: var(--accent);
 				}
 			}
+		}
+	}
+
+	&__contacts-dropdown {
+		left: auto;
+		right: 0;
+		width: max-content;
+		padding: rem(6) rem(25) rem(9) rem(33);
+
+		@include media('500', max) {
+			right: -500%;
 		}
 	}
 
@@ -98,8 +127,18 @@
 			display: grid;
 			gap: rem(8);
 			align-items: center;
+			grid-template-columns: rem(215) 1fr auto;
+			grid-template-areas:
+				'address address schedule'
+				'email contacts contacts'
+				'logo menu search'
+			;
+		}
+
+		@include media('1201', min) {
 			grid-template-columns: rem(215) auto 1fr 1fr 1fr auto;
-			grid-template-areas: 'address address email schedule contacts contacts'
+			grid-template-areas:
+				'address address email schedule contacts contacts'
 				'logo menu menu menu menu search'
 			;
 		}

@@ -7,6 +7,29 @@
 	}
 }
 
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 600;
+}
+
+h1 {
+	@include font-size(30, 40);
+}
+
+h2 {
+	@include font-size(24, 29);
+}
+
+h3 {
+	@include font-size(20, 24);
+}
+
+h4 {
+	@include font-size(18, 22);
+}
+
 .section-top {
 	&--with {
 		&_bg {
