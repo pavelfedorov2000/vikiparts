@@ -1,0 +1,34 @@
+.blog-article {
+    position: relative;
+
+    &__img {
+        aspect-ratio: 262 / 174;
+    }
+
+    &__content {
+        @include flex-column-start;
+        @include row-grid(rem(17));
+        padding: rem(14) 0 0 0;
+    }
+
+    &__date {
+        @include font-size(14, 18);
+        color: var(--gray-2);
+    }
+
+    &__title {
+        @include font-size(20, 26);
+        font-weight: 600;
+        transition: var(--transition) color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+
+    &__text {
+        @include font-size(14, 18);
+    }
+}

@@ -1,0 +1,24 @@
+<li>
+    <article class="blog-article">
+        @@include("blocks/img/img.html", {
+            "class": "blog-article__img",
+            "cover": true,
+            "src": "@@src",
+            "width": "262",
+            "height": "174",
+        })
+        <div class="blog-article__content">
+            @@include("blocks/datetime/datetime.html", {
+                "class": "blog-article__date",
+                "formattedDate": "@@formattedDate",
+                "date": "@@date",
+            })
+            @@include("blocks/title/title.html", {
+                "class": "blog-article__title",
+                "fullLink": true,
+                "text": "@@title",
+            })
+            <p class="blog-article__text">@@text</p>
+        </div>
+    </article>
+</li>

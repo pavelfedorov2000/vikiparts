@@ -1,13 +1,17 @@
 <section class="about-section">
 	<div class="container">
 		<div class="about-section__grid">
-			<h2 class="title about-section__title">О нашей компании</h2>
+            @@include("blocks/title/title.html", {
+                "class": "title about-section__title",
+                "level": "2",
+                "text": "О нашей компании",
+            })
 			@@include('blocks/img/img.html', {
-			"cover": true,
-			"class": "about-section__picture",
-			"src": "assets/images/content/about",
-			"width": "555",
-			"height": "350"
+                "cover": true,
+                "class": "about-section__picture",
+                "src": "assets/images/content/about",
+                "width": "555",
+                "height": "350"
 			})
 			<p class="about-section__text">
 				Мы динамичная и развивающаяся Компания, специализирующаяся на оптовой торговле автозапчастями, маслами и
@@ -16,7 +20,7 @@
 				повышением компетентности команды и ставим самые амбициозные цели.
 			</p>
 			@@include('blocks/features/features.html', {
-			"class": "about-section__items"
+			    "class": "about-section__items"
 			})
 		</div>
 	</div>

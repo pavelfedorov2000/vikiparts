@@ -1,21 +1,27 @@
 <div class="promo" style="background-image: url(assets/images/content/promo-bg.png);">
 	<div class="container">
-		<h1 class="visually-hidden">Vikiparts</h1>
+        @@include("blocks/title/title.html", {
+            "class": "visually-hidden",
+            "level": "1",
+            "text": "Vikiparts",
+        })
 		<div class="swiper promo-slider promo__slider">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide promo-slider__item">
-					<div class="promo__title">
-						Наша компания – надежный проводник на рынке автозапчастей!
-					</div>
+                    @@include("blocks/title/title.html", {
+                        "class": "promo__title",
+                        "tag": "div",
+                        "text": "Наша компания – надежный проводник на рынке автозапчастей!",
+                    })
 					<p class="promo__text">
 						Мы динамичная и развивающаяся Компания, специализирующаяся на оптовой торговле автозапчастями,
 						маслами и автокосметикой по системе кросс-докинга.
 					</p>
 					@@include('blocks/button/button.html', {
-					"href": "#",
-					"class": "promo__btn",
-					"style": "bg-black",
-					"text": "Подробнее"
+                        "href": "#",
+                        "class": "promo__btn",
+                        "style": "bg-black",
+                        "text": "Подробнее"
 					})
 				</div>
 				<div class="swiper-slide promo-slider__item">
@@ -27,10 +33,10 @@
 						маслами и автокосметикой по системе кросс-докинга.
 					</p>
 					@@include('blocks/button/button.html', {
-					"href": "#",
-					"class": "promo__btn",
-					"style": "bg-black",
-					"text": "Подробнее"
+                        "href": "#",
+                        "class": "promo__btn",
+                        "style": "bg-black",
+                        "text": "Подробнее"
 					})
 				</div>
 				<div class="swiper-slide promo-slider__item">
@@ -42,10 +48,10 @@
 						маслами и автокосметикой по системе кросс-докинга.
 					</p>
 					@@include('blocks/button/button.html', {
-					"href": "#",
-					"class": "promo__btn",
-					"style": "bg-black",
-					"text": "Подробнее"
+                        "href": "#",
+                        "class": "promo__btn",
+                        "style": "bg-black",
+                        "text": "Подробнее"
 					})
 				</div>
 			</div>

@@ -1,5 +1,6 @@
-/* .pagination {
-	@include flex-center-x;
+.pagination {
+    padding: rem(67) 0 rem(85);
+	@include flex-center;
 
 	// .pagination__list
 
@@ -7,31 +8,45 @@
 		display: flex;
 	}
 
-	// .pagination__item
-
-	&__item {}
-
 	// .pagination__link
 
 	&__link {
+        @include flex-center;
+        width: rem(36);
+        height: rem(36);
+        transition: var(--transition) background-color, var(--transition) color;
 
-		&.active {}
+		&.active {
+            background-color: var(--black);
+            color: var(--white);
+        }
 
 		@media (any-hover: hover) {
-			&:hover {}
+			&:hover {
+                color: var(--accent);
+            }
 		}
 	}
 
 	&__prev,
 	&__next {
+        @include flex-center;
+        width: rem(50);
+        height: rem(50);
+
+        svg {
+            width: rem(33);
+            height: rem(33);
+            fill: var(--black);
+            transition: var(--transition) fill;
+        }
+
 		@media (any-hover: hover) {
-			&:hover {}
+			&:hover {
+                svg {
+                    fill: var(--accent);
+                }
+            }
 		}
 	}
-
-	&__prev {}
-
-	// .pagination__next
-
-	&__next {}
-} */
+}

@@ -1,9 +1,26 @@
-<div class="not-found-block">
-    <img src="assets/images/not-found.svg"
-         alt="404"
-         loading="lazy">
-    <div class="not-found-block__title"></div>
-    <div class="not-found-block__text"></div>
-    <a href="#"
-       class="btn not-found-block__btn"></a>
+<div class="not-found-block" style="background-image: url(assets/images/content/404.jpg);">
+    <div class="container not-found-block__inner">
+        @@include("blocks/title/title.html", {
+            "class": "not-found-block__suptitle",
+            "tag": "div",
+            "text": "Error! Что-то пошло не так... Страница не найдена",
+        })
+        <div class="not-found-block__wrap">
+            @@loop("blocks/title/title.html", [{
+                "class": "not-found-block__title",
+                "level": "1",
+                "text": "404",
+            }, {
+                "class": "not-found-block__subtitle",
+                "tag": "div",
+                "text": "Попробуйте позже или вернитесь на другую страницу",
+            }])
+            @@include("blocks/button/button.html", {
+                "href": "#",
+                "style": "bg-accent",
+                "class": "not-found-block__btn",
+                "text": "На главную",
+            })
+        </div>
+    </div>
 </div>

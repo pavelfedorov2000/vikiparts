@@ -1,0 +1,12 @@
+.title-container {
+	&--with {
+		&_bg {
+			@include padding-y(rem(20));
+			background-color: var(--gray);
+		}
+	}
+}
+
+.page-top {
+    padding-bottom: rem(25);
+}

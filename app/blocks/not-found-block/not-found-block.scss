@@ -1,3 +1,57 @@
 .not-found-block {
-  // your code
+    @include padding-y(rem(160));
+    color: var(--white);
+    @include bg(cover);
+
+    @include media('767', max) {
+        @include padding-y(rem(100));
+    }
+
+    &__inner {
+        @include flex-column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__suptitle {
+        @include font-size(32, 39);
+        font-weight: 600;
+
+        @include media('500', max) {
+            font-size: rem(20);
+        }
+    }
+
+    &__wrap {
+        @include flex-column;
+        max-width: rem(575);
+        align-items: center;
+        text-align: center;
+    }
+
+    &__title {
+        @include font-size(250, 250);
+        font-weight: 400;
+
+        @include media('767', max) {
+            font-size: rem(100);
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem(30);
+        @include font-size(20, 24);
+
+        @include media('500', max) {
+            font-size: rem(16);
+        }
+    }
+
+    &__btn {
+        padding: rem(12) rem(40);
+        
+        @include media('768', min) {
+            align-self: end;
+        }
+    }
 }

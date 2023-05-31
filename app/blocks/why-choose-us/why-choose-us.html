@@ -1,18 +1,20 @@
 <section class="why-choose-us">
-	<div class="section-top why-choose-us__heading section-top--with_bg">
-		<div class="container">
-			<h2 class="title">@@title</h2>
-		</div>
-	</div>
+    @@include("blocks/title_container/title_container.html", {
+        "class": "why-choose-us__heading",
+        "bg": true,
+        "title": {
+            "text": "@@title",
+        }
+    })
 	<div class="container">
 		<div class="benefits-list">
 			<div class="benefit-item">
 				@@include('blocks/img/img.html', {
-				"class": "benefit-item__picture",
-				"cover": true,
-				"src": "@@item1.src",
-				"width": "246",
-				"height": "246"
+                    "class": "benefit-item__picture",
+                    "cover": true,
+                    "src": "@@item1.src",
+                    "width": "246",
+                    "height": "246"
 				})
 				<div class="benefit-item__text">
 					@@item1.text
@@ -20,11 +22,11 @@
 			</div>
 			<div class="benefit-item">
 				@@include('blocks/img/img.html', {
-				"class": "benefit-item__picture",
-				"cover": true,
-				"src": "@@item2.src",
-				"width": "246",
-				"height": "246"
+                    "class": "benefit-item__picture",
+                    "cover": true,
+                    "src": "@@item2.src",
+                    "width": "246",
+                    "height": "246"
 				})
 				<div class="benefit-item__text">
 					@@item2.text
@@ -32,11 +34,11 @@
 			</div>
 			<div class="benefit-item">
 				@@include('blocks/img/img.html', {
-				"class": "benefit-item__picture",
-				"cover": true,
-				"src": "@@item3.src",
-				"width": "246",
-				"height": "246"
+                    "class": "benefit-item__picture",
+                    "cover": true,
+                    "src": "@@item3.src",
+                    "width": "246",
+                    "height": "246"
 				})
 				<div class="benefit-item__text">
 					@@item3.text

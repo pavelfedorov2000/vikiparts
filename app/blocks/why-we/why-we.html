@@ -1,23 +1,26 @@
 <section class="why-we@@if(context.class){ @@class}">
 	@@loop('blocks/img/img.html', [{
-	"class": "why-we__img why-we__img--left",
-	"src": "assets/images/content/why-we/left",
-	"format": "png",
-	"width": "470",
-	"height": "482",
-	"contain": true
+        "class": "why-we__img why-we__img--left",
+        "src": "assets/images/content/why-we/left",
+        "format": "png",
+        "width": "470",
+        "height": "482",
+        "contain": true
 	}, {
-	"class": "why-we__img why-we__img--right",
-	"src": "assets/images/content/why-we/right",
-	"format": "png",
-	"width": "420",
-	"height": "577",
-	"contain": true
+        "class": "why-we__img why-we__img--right",
+        "src": "assets/images/content/why-we/right",
+        "format": "png",
+        "width": "420",
+        "height": "577",
+        "contain": true
 	}])
 	<div class="container">
-		<div class="section-top why-we__heading">
-			<h2 class="title">Почему мы?</h2>
-		</div>
+        @@include("blocks/title_container/title_container.html", {
+            "class": "why-we__heading",
+            "title": {
+                "text": "Почему мы?",
+            }
+        })
 		<ol class="why-we__list">
 			<li class="why-we__item why-we__item--1">
 				<div class="why-we__item-num">01</div>
@@ -26,11 +29,11 @@
 			<li class="why-we__item why-we__item--2">
 				<div class="why-we__item-num">02</div>
 				@@include('blocks/img/img.html', {
-				"picture": "false",
-				"class": "why-we__item-img",
-				"src": "assets/images/icons/why-we/02",
-				"width": "161",
-				"height": "161"
+                    "picture": "false",
+                    "class": "why-we__item-img",
+                    "src": "assets/images/icons/why-we/02",
+                    "width": "161",
+                    "height": "161"
 				})
 				<div class="why-we__item-text">Стабильные сроки доставки</div>
 			</li>
@@ -45,11 +48,11 @@
 			<li class="why-we__item why-we__item--5">
 				<div class="why-we__item-num">05</div>
 				@@include('blocks/img/img.html', {
-				"picture": "false",
-				"class": "why-we__item-img",
-				"src": "assets/images/icons/why-we/05",
-				"width": "168",
-				"height": "168"
+                    "picture": "false",
+                    "class": "why-we__item-img",
+                    "src": "assets/images/icons/why-we/05",
+                    "width": "168",
+                    "height": "168"
 				})
 				<div class="why-we__item-text">
 					Консолидация товарного предложения рынков Республики&nbsp;Беларусь и Европы
@@ -64,11 +67,11 @@
 			<li class="why-we__item why-we__item--7">
 				<div class="why-we__item-num">07</div>
 				@@include('blocks/img/img.html', {
-				"picture": "false",
-				"class": "why-we__item-img",
-				"src": "assets/images/icons/why-we/07",
-				"width": "156",
-				"height": "156"
+                    "picture": "false",
+                    "class": "why-we__item-img",
+                    "src": "assets/images/icons/why-we/07",
+                    "width": "156",
+                    "height": "156"
 				})
 				<div class="why-we__item-text">Осуществляем доставку до «двери»</div>
 			</li>

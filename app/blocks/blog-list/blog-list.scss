@@ -1,0 +1,3 @@
+.blog-list {
+    @include grid-auto-fit(rem(262), rem(30));
+}

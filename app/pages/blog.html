@@ -1,0 +1,26 @@
+@@include("blocks/head/head.html", {"title": "Блог"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <main class="page">
+        <div class="container">
+            @@include("blocks/breadcrumbs/breadcrumbs.html", {
+                "currentPage": "Блог"
+            })
+            @@include("blocks/title_container/title_container.html", {
+                "class": "page-top",
+                "title": {
+                    "level": "1",
+                    "text": "Наш блог",
+                }
+            })
+            @@include('blocks/blog-list/blog-list.html')
+            @@include('blocks/pagination/pagination.html')
+        </div>
+    </main>
+    @@include('blocks/footer/footer.html')
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

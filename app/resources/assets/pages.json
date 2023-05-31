@@ -1,4 +1,10 @@
 [{
     "href": "home.html",
     "title": "Главная"
+}, {
+    "href": "blog.html",
+    "title": "Блог"
+}, {
+    "href": "404.html",
+    "title": "Страница 404"
 }]
