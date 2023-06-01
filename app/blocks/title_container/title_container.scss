@@ -5,6 +5,14 @@
 			background-color: var(--gray);
 		}
 	}
+
+    & + .text-block {
+        padding-bottom: rem(50);
+
+        @include media('768', min) {
+            @include font-size(20, 30);
+        }
+    }
 }
 
 .page-top {

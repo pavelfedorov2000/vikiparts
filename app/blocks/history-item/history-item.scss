@@ -1,0 +1,16 @@
+.history-item {
+    @include row-grid(rem(6));
+
+	&__year {
+        font-family: var(--barlow-font);
+        @include font-size(64, 77);
+        font-weight: 600;
+        color: var(--gray-2);
+	}
+
+	&__text {
+        @include font-size(16, 20);
+        font-weight: 300;
+	}
+}
+

@@ -1,0 +1,156 @@
+.history-block {
+    padding: rem(55) 0 rem(70);
+    display: grid;
+    gap: rem(30);
+    align-items: flex-start;
+
+    @include media('768', min) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('1025', min) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @include media('1201', min) {
+        align-items: stretch;
+        gap: 0;
+        justify-items: center;
+        grid-template-columns: rem(130) repeat(5, 1fr) rem(130);
+        grid-template-areas:
+        'item-1 item-1 item-3 item-3 item-5 item-5 .'
+        'line line line line line line line'
+        '. item-2 item-2 item-4 item-4 item-6 item-6'
+        ;
+    }
+
+    &__item {
+        @include media('1201', min) {
+            position: relative;
+        }
+
+        &::before {
+            @include media('1201', min) {
+                content: '';
+                @include position-center-x;
+                width: rem(23);
+                height: rem(130);
+                background-image: url(../images/icons/line-dot.svg);
+                @include bg(contain);
+            }
+        }
+
+        &--1 {
+            @include media('1201', min) {
+                grid-area: item-1;
+                
+                >* {
+                    max-width: rem(207);
+                }
+            }
+        }
+        
+        &--2 {
+            @include media('1201', min) {
+                grid-area: item-2;
+                
+                >* {
+                    max-width: rem(288);
+                }
+            }
+        }
+
+        &--3 {
+            @include media('1201', min) {
+                grid-area: item-3;
+                
+                >* {
+                    max-width: rem(205);
+                }
+            }
+        }
+
+        &--4 {
+            @include media('1201', min) {
+                grid-area: item-4;
+                
+                >* {
+                    max-width: rem(234);
+                }
+            }
+        }
+
+        &--5 {
+            @include media('1201', min) {
+                grid-area: item-5;
+                
+                >* {
+                    max-width: rem(241);
+                }
+            }
+        }
+
+        &--6 {
+            @include media('1201', min) {
+                grid-area: item-6;
+                
+                >* {
+                    max-width: rem(227);
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            @include media('1201', min) {
+                padding-bottom: rem(120);
+
+                &::before {
+                    bottom: rem(-11);
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            @include media('1201', min) {
+                align-self: start;
+                padding-top: rem(120);
+
+                &::before {
+                    top: rem(-11);
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__line {
+        display: none;
+
+        @include media('1201', min) {
+            display: block;
+            grid-area: line;
+            @include padding-x(rem(16));
+            justify-self: stretch;
+            position: relative;
+            grid-area: line;
+            height: 1px;
+            border-bottom: 1px dashed var(--black);
+            
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: -3px;
+                @include round(rem(7));
+                background-color: var(--black);
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+}

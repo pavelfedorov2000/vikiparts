@@ -9,13 +9,6 @@
 		var(--transition) background-color;
 	color: currentColor;
 
-	@media (any-hover: hover) {
-		&:hover {
-			//background-color: var(--accent-hover);
-			//color: #fff;
-		}
-	}
-
 	&.disabled,
 	&[disabled] {
 		//background-color: var(--disabled);

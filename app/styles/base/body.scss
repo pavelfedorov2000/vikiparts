@@ -23,3 +23,7 @@ a {
 p {
 	color: var(--gray-2);
 }
+
+.text-block {
+    @include font-size(16, 19);
+}

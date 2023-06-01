@@ -28,9 +28,24 @@
 	<meta name="msapplication-config" content="./favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Inter&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<!--Styles-->
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" /> -->
 	<link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
 	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
+<script>
+	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+	if (!('ontouchstart' in document.documentElement)) {
+		document.documentElement.className += ' no-touchevents';
+	} else {
+		document.documentElement.className += ' touchevents';
+	}
+
+</script>
+</head>
+
+<body>
+	<noscript>
+		<div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div>
+	</noscript>

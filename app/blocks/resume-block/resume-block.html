@@ -1,0 +1,21 @@
+<div class="resume-block@@if(context.class){ @@class}@@if(context.style){ resume-block--style_@@style}">
+    @@include('blocks/title/title.html', {
+        "class": "resume-block__title",
+        "tag": "div",
+        "text": "Резюме присылайте по адресу:"
+    })
+    @@include('blocks/button/button.html', {
+        "href": "mailto:vn@vikiparts.by",
+        "class": "resume-block__email",
+        "text": "vn@vikiparts.by"
+    })
+    @@include('blocks/title/title.html', {
+        "class": "resume-block__subtitle",
+        "tag": "div",
+        "text": "Перед отправкой резюме:"
+    })
+    <p class="resume-block__text">
+        В теме письма указывайте тематику, например: Менеджер или Водитель.<br>
+        Отправляйте все файлы в одном письме.
+    </p>
+</div>

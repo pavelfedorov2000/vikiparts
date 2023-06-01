@@ -1,0 +1,35 @@
+@@include("blocks/head/head.html", {"title": "Карьера"})
+<div class="wrapper">
+    @@include('blocks/layout/layout.html')
+    <main class="page">
+        <div class="container">
+            @@include("blocks/breadcrumbs/breadcrumbs.html", {
+                "currentPage": "Карьера"
+            })
+            @@include("blocks/title_container/title_container.html", {
+                "class": "page-top",
+                "title": {
+                    "level": "1",
+                    "text": "Карьера",
+                }
+            })
+            <div class="text-block text-block--max-width">
+                <p>
+                    Мы динамичная и развивающаяся Компания, специализирующаяся на оптовой торговле автозапчастями, ищем профессионалов в своем деле.
+                </p>
+                <p>
+                    Предлагаем вам присоединиться к нашей команде, если вы обладаете необходимыми навыками и делаете свою работу на отлично.
+                </p>
+                <p>
+                    Интересную работу и достойную оплату гарантируем.
+                </p>
+            </div>
+        </div>
+        @@include('blocks/vacancy-block/vacancy-block.html')
+    </main>
+    @@include('blocks/footer/footer.html')
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

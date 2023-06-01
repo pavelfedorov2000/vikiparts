@@ -1,0 +1,26 @@
+[{
+    "id": "vacancy_heading_1",
+    "controls": "vacancy_collapse_1",
+    "title": "Менеджер по продажам",
+    "subtitle": "В первую очередь важны навыки коммуникации."
+}, {
+    "id": "vacancy_heading_1",
+    "controls": "vacancy_collapse_1",
+    "title": "Инженер-сметчик",
+    "subtitle": "В первую очередь важен опыт работы."
+}, {
+    "id": "vacancy_heading_1",
+    "controls": "vacancy_collapse_1",
+    "title": "Специалист по работе с клиентами",
+    "subtitle": "В первую очередь важны навыки общения с клиентами."
+}, {
+    "id": "vacancy_heading_1",
+    "controls": "vacancy_collapse_1",
+    "title": "Оператор call-центра",
+    "subtitle": "В первую очередь важен опыт работы."
+}, {
+    "id": "vacancy_heading_1",
+    "controls": "vacancy_collapse_1",
+    "title": "Водитель",
+    "subtitle": "В первую очередь важны навыки общения с клиентами."
+}]

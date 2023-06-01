@@ -1,0 +1,109 @@
+.accordion-item {
+    $this: &;
+    // .accordion-item__toggle
+
+    &__arrow {
+        grid-area: arrow;
+        align-self: end;
+        position: relative;
+        @include round(rem(31));
+        background-color: var(--accent);
+        transition: var(--transition) transform;
+
+        &::before {
+            content: '';
+            @include position-center-xy;
+            width: rem(15);
+            height: rem(15);
+            background-image: url(../images/icons/arrow-down.svg);
+            @include bg(contain);
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        @include font-size(24, 29);
+        font-weight: 600;
+
+        @include media('767', max) {
+            font-size: rem(20);
+        }
+    }
+
+    &__subtitle {
+        grid-area: subtitle;
+        @include font-size(20, 30);
+        font-weight: 400;
+        color: var(--gray-2);
+
+        @include media('767', max) {
+            font-size: rem(16);
+        }
+    }
+
+    &__toggle {
+        @include padding-y(rem(20));
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: rem(15);
+        grid-template-areas:
+        'title arrow'
+        'subtitle arrow'
+        ;
+        border-bottom: 1px dashed var(--gray-2);
+
+        @include media('1025', min) {
+            @include padding-x(rem(45));
+        }
+
+        &[aria-expanded="true"] {
+            #{$this}__arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .accordion-item__content
+
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition) max-height;
+        
+        ul {
+            margin-left: rem(20);
+            @include font-size(20, 30);
+            list-style: disc;
+
+            @include media('767', max) {
+                font-size: rem(16);
+            }
+
+            &:not(:first-child) {
+                margin-top: rem(16);
+            }
+        }
+    }
+
+    &__row {
+        @include padding-y(rem(30));
+        display: grid;
+        gap: rem(36) rem(48);
+
+        @include media('1025', min) {
+            padding: rem(30) var(--container-padding);
+        }
+
+        @include media('768', min) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__col {
+        @include row-grid(rem(36));
+    }
+}

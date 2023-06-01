@@ -1,53 +1,53 @@
 <nav class="menu@@if(context.class){ @@class}">
 	<ul class="menu__list">
 		@@loop('blocks/button/button.html', [{
-		"href": "#",
-		"listItem": true,
-		"listItemClass": "menu__item",
-		"class": "menu__link",
-		"style": "link",
-		"text": "О нас",
-		"outerIcon": @@if(!context.isFooter){"drop-arrow"}@@if(context.isFooter){false},
-		"dropdown": @@if(!context.isFooter){true}@@if(context.isFooter){false}
+            "href": "#",
+            "listItem": true,
+            "listItemClass": "menu__item",
+            "class": "menu__link",
+            "style": "link",
+            "text": "О нас",
+            "outerIcon": @@if(!context.isFooter){"drop-arrow"}@@if(context.isFooter){false},
+            "dropdown": @@if(!context.isFooter){true}@@if(context.isFooter){false}
 		}, {
-		"href": "#",
-		"listItem": true,
-		"listItemClass": "menu__item",
-		"class": "menu__link",
-		"style": "link",
-		"text": "@@if(!context.isFooter){Транспортные услуги}@@if(context.isFooter){Карьера и сотрудничество}",
+            "href": "#",
+            "listItem": true,
+            "listItemClass": "menu__item",
+            "class": "menu__link",
+            "style": "link",
+            "text": "@@if(!context.isFooter){Транспортные услуги}@@if(context.isFooter){Карьера и сотрудничество}",
 		}, {
-		"href": "#",
-		"listItem": true,
-		"listItemClass": "menu__item",
-		"class": "menu__link",
-		"style": "link",
-		"text": "@@if(!context.isFooter){Наш блог}@@if(context.isFooter){Новости}",
+            "href": "#",
+            "listItem": true,
+            "listItemClass": "menu__item",
+            "class": "menu__link",
+            "style": "link",
+            "text": "@@if(!context.isFooter){Наш блог}@@if(context.isFooter){Новости}",
 		}, {
-		"href": "#",
-		"listItem": true,
-		"listItemClass": "menu__item",
-		"class": "menu__link",
-		"style": "link",
-		"text": "@@if(!context.isFooter){Карьера}@@if(context.isFooter){Транспортные услуги}",
+            "href": "#",
+            "listItem": true,
+            "listItemClass": "menu__item",
+            "class": "menu__link",
+            "style": "link",
+            "text": "@@if(!context.isFooter){Карьера}@@if(context.isFooter){Транспортные услуги}",
 		}])
 		@@if(!context.isFooter){
-		@@include('blocks/button/button.html', {
-		"href": "#",
-		"listItem": true,
-		"listItemClass": "menu__item",
-		"class": "menu__link",
-		"style": "link",
-		"text": "Сотрудничество",
-		})
+            @@include('blocks/button/button.html', {
+                "href": "#",
+                "listItem": true,
+                "listItemClass": "menu__item",
+                "class": "menu__link",
+                "style": "link",
+                "text": "Сотрудничество",
+            })
 		}
 		@@include('blocks/button/button.html', {
-		"href": "#",
-		"listItem": true,
-		"listItemClass": "menu__item",
-		"class": "menu__link",
-		"style": "link",
-		"text": "Контакты",
-		})
+            "href": "#",
+            "listItem": true,
+            "listItemClass": "menu__item",
+            "class": "menu__link",
+            "style": "link",
+            "text": "Контакты",
+            })
 	</ul>
 </nav>

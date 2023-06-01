@@ -5,6 +5,12 @@
     "href": "blog.html",
     "title": "Блог"
 }, {
+    "href": "career.html",
+    "title": "Карьера"
+}, {
+    "href": "history.html",
+    "title": "История"
+}, {
     "href": "404.html",
     "title": "Страница 404"
 }]

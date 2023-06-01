@@ -7,7 +7,7 @@
         })
     }
     @@if(context.bg){
-        <div class="container">
+        <div class="container container--fluid">
             @@include("blocks/title/title.html", {
                 "class": "@@if(context.title.class){@@title.class}@@if(!context.title.class){title}",
                 "level": "@@if(context.title.level){@@title.level}@@if(!context.title.level){2}",

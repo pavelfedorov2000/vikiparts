@@ -8,11 +8,14 @@
 	--gray-3: #F5F5F5;
 	--gray-4: #757575;
 
-	--container-width: #{rem(1200)};
+    --container-width: #{rem(1140)};
+	--container-width_xl: #{rem(1200)};
 	--container-padding: #{rem(15)};
 
 	--base-font-size: 16;
 	--main-font: 'Montserrat', sans-serif;
+    --inter-font: 'Inter', sans-serif;
+    --barlow-font: 'Barlow', sans-serif;
 	--color-default: var(--black);
 
 	--transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -26,4 +29,5 @@
 	--brs: 25px;
 	--brs-xs: 3px;
 	--bsh: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --bsh-2: 0 4px 25px rgba(0, 0, 0, 0.1);
 }

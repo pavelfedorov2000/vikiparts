@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     app.burger.init();
     app.search.init();
+    app.accordion.init();
     new Swiper('.promo-slider', {
         loop: true,
         slidesPerView: 1,

@@ -1,8 +1,14 @@
 .container {
-	width: calc(var(--container-width) + var(--container-padding) * 2);
+    --width: var(--container-width);
+
+	width: calc(var(--width) + var(--container-padding) * 2);
 	max-width: 100%;
 	@include padding-x(var(--container-padding));
 	margin: 0 auto;
+
+    &--fluid {
+        --width: var(--container-width_xl);
+    }
 }
 
 .wrapper {

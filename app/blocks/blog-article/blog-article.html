@@ -14,11 +14,11 @@
                 "date": "@@date",
             })
             @@include("blocks/title/title.html", {
-                "class": "blog-article__title",
-                "fullLink": true,
+                "tag": "a",
+                "class": "full-link blog-article__title",
                 "text": "@@title",
             })
-            <p class="blog-article__text">@@text</p>
+            <div class="blog-article__text">@@text</div>
         </div>
     </article>
 </li>

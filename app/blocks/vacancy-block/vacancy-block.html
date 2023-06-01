@@ -1,0 +1,15 @@
+<section class="vacancy-block">
+    <div class="container container--fluid">
+        @@include('blocks/title_container/title_container.html', {
+            "class": "vacancy-block__heading",
+            "title": {
+                "class": "vacancy-block__title",
+                "text": "Вакансия"
+            }
+        })
+        <ul class="vacancies-list">
+            @@loop("blocks/accordion-item/accordion-item.html", "../resources/assets/vacancies.json")
+        </ul>
+        @@include('blocks/resume-block/resume-block.html')
+    </div>
+</section>
