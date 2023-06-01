@@ -5,6 +5,10 @@
     background-color: var(--white);
     box-shadow: var(--bsh);
 
+    @include media('767', max) {
+        padding: rem(30) rem(40);
+    }
+
     @include media('1201', min) {
         max-width: rem(1114);
         margin: 0 auto;
@@ -25,6 +29,10 @@
         margin-bottom: rem(17);
         @include font-size(24, 29);
         font-weight: 600;
+
+        @include media('500', max) {
+            font-size: rem(20);
+        }
     }
 
     &__email {
@@ -32,6 +40,11 @@
         @include font-size(24, 29);
         font-weight: 600;
         text-transform: uppercase;
+
+        @include media('500', max) {
+            margin-bottom: rem(20);
+            font-size: rem(20);
+        }
 
         @media (any-hover: hover) {
             &:hover {
@@ -43,9 +56,17 @@
     &__subtitle {
         @include font-size(20, 24);
         font-weight: 600;
+
+        @include media('500', max) {
+            font-size: rem(16);
+        }
     }
 
     &__text {
         @include font-size(20, 30);
+
+        @include media('500', max) {
+            font-size: rem(16);
+        }
     }
 }

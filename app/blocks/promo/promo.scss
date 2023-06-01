@@ -53,6 +53,11 @@
 	&__btn {
 		padding: rem(12) rem(43);
 	}
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        position: static;
+    }
 }
 
 .promo-slider {

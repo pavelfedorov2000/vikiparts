@@ -1,0 +1,15 @@
+.slider-btns {
+    display: none;
+
+    @include media('768', min) {
+        @include position-center-y;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        @include flex-center-between;
+    }
+}
+
+.slider-wrap {
+    position: relative;
+}

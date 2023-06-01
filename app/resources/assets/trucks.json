@@ -1,0 +1,52 @@
+[{
+    "src": "assets/images/content/trucks/01",
+    "title": "Грузоперевозки до 2-х тонн",
+    "brand": "Газ",
+    "properties": {
+        "length": "3,5",
+        "width": "1,8",
+        "height": "1,9"
+    },
+    "trailer": {
+        "length": "3,3",
+        "width": "1,5",
+        "height": "1,8"
+    }
+}, {
+    "src": "assets/images/content/trucks/02",
+    "title": "Грузоперевозки до 3-х тонн",
+    "brand": "Iveco Daily",
+    "properties": {
+        "length": "6,3",
+        "width": "2,4",
+        "height": "2,3"
+    },
+    "trailer": {
+        "length": "4,5",
+        "width": "1,95",
+        "height": "2,0"
+    }
+}, {
+    "src": "assets/images/content/trucks/02",
+    "title": "Грузоперевозки до 6 тонн",
+    "brand": "Iveco Daily",
+    "properties": {
+        "length": "6,3",
+        "width": "2,4",
+        "height": "2,3"
+    },
+    "trailer": {
+        "length": "6,0",
+        "width": "2,4",
+        "height": "2,3"
+    }
+}, {
+    "src": "assets/images/content/trucks/03",
+    "title": "Грузоперевозки до 7 тонн",
+    "brand": "Iveco Daily",
+    "properties": {
+        "length": "7,0",
+        "width": "2,45",
+        "height": "2,6"
+    }
+}]

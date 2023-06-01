@@ -1,0 +1,76 @@
+.cooperation {
+    position: relative;
+    padding: rem(22) rem(20) rem(25) rem(66);
+    background-color: var(--white);
+    box-shadow: var(--bsh-2);
+
+    @include media('767', max) {
+        padding: rem(25) rem(20);        
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: rem(58);
+        left: rem(-32);
+        width: rem(61);
+        height: rem(61);
+        background-image: url(../images/icons/clip.svg);
+        @include bg(contain);
+    }
+
+    &__row {
+        display: grid;
+        gap: rem(30);
+        
+        @include media('1025', min) {
+            grid-template-columns: calc(460 / 1145 * 100%) 1fr calc(472 / 1145 * 100%);
+            grid-template-areas: 'content . form';
+        }
+    }
+
+    &__content {
+        @include font-size(20, 30);
+
+        @include media('767', max) {
+            font-size: rem(16);
+        }
+
+        @include media('1025', min) {
+            grid-area: content;
+        }
+
+        p {
+            &:first-child {
+                font-weight: 600;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
+    &__form {
+        padding: rem(37) rem(15) rem(53);
+        @include flex-column-center;
+        background-color: var(--black);
+        color: var(--white);
+
+        @include media('1025', min) {
+            grid-area: form;
+        }
+    }
+
+    &__form-body {
+        @include media('768', min) {
+            width: rem(355);
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(26);
+        text-align: center;
+    }
+}

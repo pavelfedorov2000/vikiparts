@@ -24,6 +24,192 @@ p {
 	color: var(--gray-2);
 }
 
+.text-content {
+    padding-bottom: rem(60);
+
+    @include media('767', max) {
+        padding-bottom: rem(30);
+    }
+
+    p {
+        @include font-size(16, 24);
+        color: var(--black);
+    }
+
+    strong {
+        color: var(--accent);
+        font-weight: 400;
+    }
+
+    ul {
+        margin-left: rem(20);
+        list-style: disc;
+        @include font-size(20, 34);
+
+        @include media('767', max) {
+            font-size: rem(16);
+        }
+    }
+    
+    h2,
+    h3,
+    p,
+    ul,
+    ol {
+        margin-bottom: rem(30);
+
+        @include media('500', max) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    picture,
+    .table-wrap {
+        & + * {
+            margin-top: rem(25);
+        }
+    }
+}
+
 .text-block {
     @include font-size(16, 19);
+}
+
+blockquote {
+    margin-bottom: rem(30);
+    position: relative;
+    display: inline;
+    @include font-size(20, 30);
+
+    @include media('1200', max) {
+        padding-left: rem(30);
+    }
+
+    @include media('767', max) {
+        font-size: rem(16);
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: rem(24);
+        height: rem(24);
+        background-image: url(../images/icons/quotes.svg);
+        @include bg(contain);
+    }
+
+    &::before {
+        top: 0;
+        left: rem(-29);
+
+        @include media('1200', max) {
+            left: 0;
+        }
+    }
+
+    &::after {
+        right: rem(-29);
+        bottom: rem(-4);
+    }
+
+    & + * {
+        margin-top: rem(30);
+
+        @include media('500', max) {
+            margin-top: rem(15);
+        }
+    }
+}
+
+.table-wrap {
+    @include media('1024', max) {
+        overflow-x: auto;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: rem(17) rem(15);
+    @include font-size(16, 26);
+    width: 25%;
+    white-space: nowrap;
+
+    &:first-child {
+        @include media('1025', min) {
+            padding-left: rem(72);
+        }
+    }
+
+    a {
+        transition: var(--transition) color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+}
+
+thead {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+tbody {
+    tr {
+        border-bottom: 1px solid var(--gray);
+    }
+}
+
+table {
+    &.grid {
+        td {
+            white-space: unset;
+
+            &:first-child {
+                @include media('1025', min) {
+                    padding-left: rem(30);
+                }
+            }
+
+            &:nth-child(2) {
+                width: 13.1%;
+            }
+
+            &:last-child {
+                width: 23.4%;
+            }
+
+            @include media('1025', min) {
+                @include font-size(20, 30);
+            }
+        }
+
+        thead {
+            margin-bottom: rem(10);
+        }
+
+        tbody {
+            tr {
+                border-top: 1px solid var(--black);
+                border-bottom-color: var(--black);
+
+                &:not(:last-child) {
+                    margin-bottom: rem(10);
+                }
+            }
+
+            td {
+                border-right: 1px solid var(--black);
+                
+                &:first-child {
+                    border-left: 1px solid var(--black);
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,28 @@
+<section class="cooperation@@if(context.class){ @@class}@@if(context.style){ cooperation--style_@@style}">
+    <div class="cooperation__row">
+        <div class="cooperation__content">
+            <p>
+                Мы рады будем видеть у себя в команде новых поставщиков и клиентов.
+            </p>
+            <p>
+                Поможем с перевозкой из Минска в любую точку Беларуси. На дальние расстояния действуют специальные предложения со скидкой до 25%.
+            </p>
+            <p>
+                Собственный автопарк грузовых автомобилей для перевозки грузов больших размеров, мебели, холодильника, бытовой техники, строительных материалов и др.<br>
+                В пределах Минска стоимость грузоперевозки рассчитывается от количества времени (часов). За МКАД — от расстояния перевозки (километры).
+            </p>
+        </div>
+        <div class="cooperation__form">
+            @@include("blocks/title/title.html", {
+                "class": "title cooperation__title",
+                "level": "2",
+                "text": "Обратная связь для поставщиков и клиентов",
+            })
+            @@include('blocks/feedback-form/feedback-form.html', {
+                "orientation": "column",
+                "class": "cooperation__form-body",
+                "buttonText": "Отправить данные"
+            })
+        </div>
+    </div>
+</section>

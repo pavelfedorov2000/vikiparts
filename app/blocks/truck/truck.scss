@@ -1,0 +1,168 @@
+.truck {
+    position: relative;
+    padding: rem(20) 0;
+
+    &:first-child {
+        padding-top: rem(30);
+        border-top: 1px solid #DFDFDF;
+    }
+
+    &::after {
+        content: '';
+        @include position-center-x;
+        bottom: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 50%;
+        background-color: var(--gray-3);
+    }
+
+    // .truck__row
+
+    &__row {
+        display: grid;
+        gap: rem(30);
+
+        @include media('1025', min) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__img {
+        display: block;
+        aspect-ratio: 554 / 372;
+    }
+
+    // .truck__col
+
+    &__col {
+        @include flex-column;
+    }
+
+    // .truck__img-descr
+
+    &__img-descr {
+        padding-left: rem(20);
+        border-left: 3px solid var(--black);
+        @include font-size(14, 21);
+    }
+
+    &__title {
+        margin-bottom: rem(22);
+        @include font-size(20, 24);
+        font-weight: 600;
+    }
+
+    // .truck__main
+
+    &__main {
+        margin-bottom: rem(17);
+        position: relative;
+        
+        span {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            padding: rem(7) rem(25) rem(10) rem(15);
+            background-color: var(--white);
+            border: 1px solid var(--accent);
+            @include font-size(16, 24);
+        }
+
+        &::after {
+            content: '';
+            @include position-center-y;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--accent);
+        }
+    }
+
+    // .truck__features
+
+    &__features {
+        margin-bottom: rem(40);
+    }
+
+    &__features-title {
+        margin-bottom: rem(6);
+        @include font-size(16, 24);
+        font-weight: 600;
+    }
+
+    &__brand {
+        @include font-size(20, 30);
+    }
+
+    // .truck__leader
+
+    &__leader {
+        display: flex;
+    }
+
+    // .truck__trailer
+
+    &__trailer {
+        position: relative;
+        margin: rem(15) 0 rem(28);
+        
+        span {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            padding: rem(7) rem(10) rem(10) rem(15);
+            background-color: var(--white);
+            border: 1px solid var(--gray-2);
+            @include font-size(16, 24);
+        }
+
+        &::after {
+            content: '';
+            @include position-center-y;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--gray-2);
+        }
+    }
+}
+
+.leader {
+    div {
+        @include row-grid(rem(20));
+        justify-items: center;
+        text-align: center;
+
+        &:not(:first-child) {
+            padding-left: rem(35);
+        }
+
+        &:not(:last-child) {
+            padding-right: rem(35);
+        }
+
+        & + div {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: rem(-10);
+                left: 0;
+                width: 1px;
+                height: rem(54);
+                background-color: rgba(160, 160, 160, 0.3);
+            }
+        }
+    }
+
+    dt {
+        @include font-size(20, 24);
+        font-weight: 600;
+    }
+
+    dd {
+        @include font-size(20, 30);
+    }
+}

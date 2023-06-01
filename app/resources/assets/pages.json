@@ -11,6 +11,18 @@
     "href": "history.html",
     "title": "История"
 }, {
+    "href": "cooperation.html",
+    "title": "Сотрудничество"
+}, {
+    "href": "about.html",
+    "title": "О нас"
+}, {
+    "href": "text.html",
+    "title": "Текстовая"
+}, {
+    "href": "transport.html",
+    "title": "Транспортные услуги"
+}, {
     "href": "404.html",
     "title": "Страница 404"
 }]

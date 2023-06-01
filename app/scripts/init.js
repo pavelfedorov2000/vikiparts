@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", () => {
     app.burger.init();
     app.search.init();
     app.accordion.init();
+    app.reviewsSlider.init();
     new Swiper('.promo-slider', {
         loop: true,
         slidesPerView: 1,
@@ -23,5 +24,26 @@ window.addEventListener("DOMContentLoaded", () => {
                 slidesPerView: 4,
             },
         }, */
+    });
+
+    Fancybox.bind('[data-fancybox]', {
+        autoFocus: false,
+        dragToClose: false,
+        closeButton: false,
+        showClass: 'fancybox-fadeIn',
+        Toolbar: {
+            display: {
+                left: [
+                ],
+                middle: [],
+                right: [
+                'iterateZoom',
+                'close',
+                ],
+            },
+        },
+        Thumbs: {
+            showOnStart: false,
+        },
     });
 });

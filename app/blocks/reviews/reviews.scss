@@ -1,0 +1,55 @@
+.reviews {
+    padding: rem(76) 0 rem(36);
+
+    &-slider {
+        position: relative;
+        padding: rem(25) 0 rem(50);
+
+        .swiper-pagination {
+            bottom: 0;
+            justify-content: center;
+        }
+
+        &__item {
+            cursor: pointer;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                opacity: 0;
+                transition: var(--transition) opacity;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(78, 77, 77, 0.34);
+            }
+
+            &::after {
+                @include position-center-xy;
+                width: rem(44);
+                height: rem(44);
+                background-image: url(../images/icons/eye.svg);
+                @include bg(contain);
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    &::before,
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__img {
+            aspect-ratio: 257 / 357;
+        }
+    }
+}

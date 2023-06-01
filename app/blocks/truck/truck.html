@@ -1,0 +1,72 @@
+<article class="truck">
+    <div class="truck__row">
+        <div class="truck__col">
+            @@include("blocks/img/img.html", {
+                "class": "truck__img",
+                "contain": true,
+                "src": "@@src",
+                "format": "png",
+                "width": "554",
+                "height": "372",
+            })
+            <div class="truck__img-descr">
+                Изображения, отображаемые здесь, могут не быть полным и точным представлением выбранной вами спецификации, и поэтому на них не следует полагаться.
+            </div>
+        </div>
+        <div class="truck__col">
+            @@include("blocks/title/title.html", {
+                "class": "truck__title",
+                "tag": "div",
+                "text": "Основные параметры",
+            })
+            <div class="truck__main">
+                <span>@@title</span>
+            </div>
+            <div class="truck__features">
+                @@include("blocks/title/title.html", {
+                    "class": "truck__features-title",
+                    "tag": "div",
+                    "text": "Характеристики авто:",
+                })
+                @@include("blocks/title/title.html", {
+                    "class": "truck__brand",
+                    "tag": "div",
+                    "text": "@@brand",
+                })
+            </div>
+            <dl class="leader truck__leader">
+                <div>
+                    <dt>Длина, м</dt>
+                    <dd>@@properties.length</dd>
+                </div>
+                <div>
+                    <dt>Ширина, м</dt>
+                    <dd>@@properties.width</dd>
+                </div>
+                <div>
+                    <dt>Высота, м</dt>
+                    <dd>@@properties.height</dd>
+                </div>
+            </dl>
+            @@if(context.trailer){
+                <div class="truck__trailer">
+                    <span>+ Прицеп</span>
+                </div>
+                <dl class="leader truck__leader">
+                    <div>
+                        <dt>Длина, м</dt>
+                        <dd>@@trailer.length</dd>
+                    </div>
+                    <div>
+                        <dt>Ширина, м</dt>
+                        <dd>@@trailer.width</dd>
+                    </div>
+                    <div>
+                        <dt>Высота, м</dt>
+                        <dd>@@trailer.height</dd>
+                    </div>
+                </dl>
+            }
+        </div>
+    </div>
+</article>

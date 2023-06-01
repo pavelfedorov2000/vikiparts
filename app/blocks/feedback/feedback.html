@@ -6,40 +6,9 @@
                 "level": "2",
                 "text": "Обратная связь Vikiparts",
             })
-			<form action="#" class="feedback-form">
-				<div class="feedback-form__fields">
-					@@loop('blocks/field/field.html', [{
-                        "name": "name",
-                        "placeholder": "Имя",
-                        "required": true
-					}, {
-                        "name": "email",
-                        "type": "email",
-                        "placeholder": "E-mail",
-                        "required": true
-					}, {
-                        "name": "phone",
-                        "type": "tel",
-                        "placeholder": "Телефон",
-                        "required": true
-					}, {
-                        "name": "company",
-                        "placeholder": "Название компании",
-					}])
-				</div>
-				@@include('blocks/checkbox/checkbox.html', {
-                    "class": "form__agree feedback-form__agree",
-                    "text": 'Согласен с <a href="#">политикой конфеденциальности</a>',
-                    "required": true
-				})
-				<small class="form__required feedback-form__required">*поля обязательные для заполнения</small>
-				@@include('blocks/button/button.html', {
-                    "class": "feedback-form__btn",
-                    "style": "bg-accent",
-                    "type": "submit",
-                    "text": "Отправить"
-				})
-			</form>
+			@@include('blocks/feedback-form/feedback-form.html', {
+                "buttonText": "Отправить"
+            })
 		</div>
 	</div>
 </aside>

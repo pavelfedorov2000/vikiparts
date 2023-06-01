@@ -101,6 +101,7 @@
         "stylelint-scss": "^3.19.0"
     },
     "dependencies": {
+        "@fancyapps/ui": "^5.0.19",
         "gulp-sass": "^5.0.0",
         "gulp-webp": "^4.0.1",
         "sass": "^1.45.1",

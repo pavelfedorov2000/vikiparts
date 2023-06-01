@@ -1,0 +1,54 @@
+<section class="reviews@@if(context.class){ @@class}@@if(context.style){ reviews--style_@@style}">
+    <div class="container">
+        @@include("blocks/title_container/title_container.html", {
+            "class": "reviews__heading",
+            "title": {
+                "text": "Отзывы",
+            }
+        })
+        <div class="slider-wrap">
+            @@include('blocks/slider-btns/slider-btns.html')
+            <div class="reviews-slider swiper">
+                <div class="swiper-wrapper">
+                    <a data-fancybox="gallery" data-src="assets/images/content/reviews/01.jpg" class="swiper-slide reviews-slider__item">
+                        @@include("blocks/img/img.html", {
+                            "class": "reviews-slider__img",
+                            "cover": true,
+                            "src": "assets/images/content/reviews/01",
+                            "width": "257",
+                            "height": "357",
+                        })
+                    </a>
+                    <a data-fancybox="gallery" data-src="assets/images/content/reviews/02.jpg" class="swiper-slide reviews-slider__item">
+                        @@include("blocks/img/img.html", {
+                            "class": "reviews-slider__img",
+                            "cover": true,
+                            "src": "assets/images/content/reviews/02",
+                            "width": "257",
+                            "height": "357",
+                        })
+                    </a>
+                    <a data-fancybox="gallery" data-src="assets/images/content/reviews/03.jpg" class="swiper-slide reviews-slider__item">
+                        @@include("blocks/img/img.html", {
+                            "class": "reviews-slider__img",
+                            "cover": true,
+                            "src": "assets/images/content/reviews/03",
+                            "width": "257",
+                            "height": "357",
+                        })
+                    </a>
+                    <a data-fancybox="gallery" data-src="assets/images/content/reviews/04.jpg" class="swiper-slide reviews-slider__item">
+                        @@include("blocks/img/img.html", {
+                            "class": "reviews-slider__img",
+                            "cover": true,
+                            "src": "assets/images/content/reviews/04",
+                            "width": "257",
+                            "height": "357",
+                        })
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
