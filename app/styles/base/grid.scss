@@ -9,6 +9,12 @@
     &--fluid {
         --width: var(--container-width_xl);
     }
+
+    > .text-block {
+        &:last-child {
+            padding-bottom: rem(45);
+        }
+    }
 }
 
 .wrapper {

@@ -1,27 +1,27 @@
 body {
-	min-width: 320px;
-	font-style: normal;
-	font-family: var(--main-font);
-	font-size: calc(var(--base-font-size) / 10 * 1rem);
-	line-height: 1.5;
-	font-weight: 400;
-	color: var(--color-default);
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
-	overflow-x: hidden;
+    min-width: 320px;
+    font-style: normal;
+    font-family: var(--main-font);
+    font-size: calc(var(--base-font-size) / 10 * 1rem);
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-default);
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    overflow-x: hidden;
 
-	&._lock {
-		overflow-y: hidden;
-	}
+    &._lock {
+        overflow-y: hidden;
+    }
 }
 
 a {
-	text-decoration: none;
-	color: currentColor;
+    text-decoration: none;
+    color: currentColor;
 }
 
 p {
-	color: var(--gray-2);
+    color: var(--gray-2);
 }
 
 .text-content {
@@ -50,7 +50,7 @@ p {
             font-size: rem(16);
         }
     }
-    
+
     h2,
     h3,
     p,
@@ -63,7 +63,7 @@ p {
         }
     }
 
-    picture,
+    > picture,
     .table-wrap {
         & + * {
             margin-top: rem(25);
@@ -89,7 +89,8 @@ blockquote {
         font-size: rem(16);
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
         content: '';
         position: absolute;
         width: rem(24);
@@ -137,6 +138,10 @@ td {
     width: 25%;
     white-space: nowrap;
 
+    @include media('500', max) {
+        font-size: rem(14);
+    }
+
     &:first-child {
         @include media('1025', min) {
             padding-left: rem(72);
@@ -160,55 +165,63 @@ thead {
 }
 
 tbody {
-    tr {
+    td {
         border-bottom: 1px solid var(--gray);
     }
 }
 
-table {
-    &.grid {
-        td {
-            white-space: unset;
+.logistics-centers-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
 
-            &:first-child {
-                @include media('1025', min) {
-                    padding-left: rem(30);
-                }
+    td {
+        white-space: unset;
+
+        @include media('767', max) {
+            width: auto;
+        }
+
+        &:first-child {
+            @include media('1025', min) {
+                padding-left: rem(30);
             }
 
-            &:nth-child(2) {
+            @include media('767', max) {
+                min-width: rem(250);
+            }
+        }
+
+        &:nth-child(2) {
+            white-space: nowrap;
+
+            @include media('1025', min) {
                 width: 13.1%;
             }
+        }
 
-            &:last-child {
+        &:last-child {
+            @include media('1025', min) {
                 width: 23.4%;
             }
 
-            @include media('1025', min) {
-                @include font-size(20, 30);
+            @include media('767', max) {
+                min-width: rem(275);
             }
         }
 
-        thead {
-            margin-bottom: rem(10);
+        @include media('1025', min) {
+            @include font-size(20, 30);
         }
+    }
 
-        tbody {
-            tr {
-                border-top: 1px solid var(--black);
-                border-bottom-color: var(--black);
+    tbody {
+        td {
+            border-top: 1px solid var(--black);
+            border-bottom-color: var(--black);
+            border-right: 1px solid var(--black);
 
-                &:not(:last-child) {
-                    margin-bottom: rem(10);
-                }
-            }
-
-            td {
-                border-right: 1px solid var(--black);
-                
-                &:first-child {
-                    border-left: 1px solid var(--black);
-                }
+            &:first-child {
+                border-left: 1px solid var(--black);
             }
         }
     }

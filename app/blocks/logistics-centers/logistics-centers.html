@@ -1,7 +1,13 @@
 <div class="container container--fluid">
-    <h2>Транспортно-логистические центры в РФ</h2>
+    @@include('blocks/title_container/title_container.html', {
+        "title": {
+            "class": "logistics-centers__heading",
+            "level": "2",
+            "text": "Транспортно-логистические центры в РФ"
+        }
+    })
     <div class="table-wrap">
-        <table class="grid">
+        <table class="logistics-centers-table">
             <thead>
                 <tr>
                     <td>Месторасположение</td>

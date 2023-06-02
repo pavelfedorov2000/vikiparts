@@ -5,13 +5,11 @@
 	cursor: pointer;
 	border: none;
 	font-family: var(--main-font);
-	transition: var(--transition) color,
-		var(--transition) background-color;
+	transition: var(--transition) color, var(--transition) background-color, var(--transition) box-shadow;
 	color: currentColor;
 
 	&.disabled,
 	&[disabled] {
-		//background-color: var(--disabled);
 		border: none;
 		cursor: not-allowed;
 
@@ -27,13 +25,6 @@
 	&__icon {
 		flex-shrink: 0;
 		transition: var(--transition) fill;
-	}
-
-	&__text {}
-
-	&--primary {
-		background-color: var(--accent);
-		color: var(--white);
 	}
 
 	&--style {
@@ -58,6 +49,12 @@
 
 			&-accent {
 				background-color: var(--accent);
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        box-shadow: var(--bsh);
+                    }
+                }
 			}
 		}
 

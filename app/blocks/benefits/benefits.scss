@@ -34,6 +34,10 @@
 	// .benefits__item
 	&__item {
         @include flex-column-start;
+        
+        @include media('1201', min) {
+            max-width: rem(247);
+        }
 
         @include media('767', max) {
             align-items: center;

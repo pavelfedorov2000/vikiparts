@@ -1,3 +1,9 @@
 .logistics-centers {
-  // your code
+    &__heading {
+        padding: rem(47) rem(30) rem(10);
+
+        @include media('767', max) {
+            padding: rem(30) 0 0;
+        }
+    }
 }

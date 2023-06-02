@@ -1,0 +1,83 @@
+<div class="contacts">
+    <div class="contacts__item">
+        <div class="contacts__item-icon">
+            @@include("blocks/img/img.html", {
+                "picture": "false",
+                "src": "assets/images/icons/pin",
+                "format": "svg",
+                "width": "15",
+                "height": "15",
+            })
+        </div>
+        <div class="contacts__item-title">Адрес</div>
+        <div class="contacts__item-content">
+            Минск, ул. Жудро, 40, каб. 307 (м. Спортивная)
+        </div>
+    </div>
+    <div class="contacts__item">
+        <div class="contacts__item-icon">
+            @@include("blocks/img/img.html", {
+                "picture": "false",
+                "src": "assets/images/icons/phone-call",
+                "format": "svg",
+                "width": "15",
+                "height": "15",
+            })
+        </div>
+        <div class="contacts__item-title">Телефон</div>
+        <div class="contacts__item-content">
+            @@include('blocks/button/button.html', {
+                "href": "tel:+375447107070",
+                "class": "contacts__item-link",
+                "style": "link",
+                "text": "+375 (44) 710-70-70"
+            })
+            <div class="contacts__item-phones">
+                @@loop('blocks/button/button.html', [{
+                    "href": "tel:+375291206060",
+                    "class": "contacts__item-link",
+                    "style": "link",
+                    "text": "+375 (29) 120-60-60"
+                }, {
+                    "href": "https://t.me/",
+                    "target": "_blank",
+                    "class": "contacts__item-messanger",
+                    "style": "messanger",
+                    "img": {
+                        "src": "assets/images/icons/tg",
+                        "alt": "telegram"
+                    }
+                }, {
+                    "href": "viber://chat?number=%2B375291206060",
+                    "target": "_blank",
+                    "class": "contacts__item-messanger",
+                    "style": "messanger",
+                    "img": {
+                        "src": "assets/images/icons/viber",
+                        "alt": "viber"
+                    }
+                }])
+            </div>
+        </div>
+    </div>
+    <div class="contacts__item">
+        <div class="contacts__item-icon">
+            @@include("blocks/img/img.html", {
+                "picture": "false",
+                "src": "assets/images/icons/pin",
+                "format": "svg",
+                "width": "15",
+                "height": "15",
+            })
+        </div>
+        <div class="contacts__item-title">E-mail</div>
+        <div class="contacts__item-content">
+            @@include('blocks/button/button.html', {
+                "href": "mailto:vn@vikiparts.by",
+                "class": "contacts__item-link",
+                "style": "link",
+                "text": "vn@vikiparts.by"
+            })
+        </div>
+    </div>
+</div>

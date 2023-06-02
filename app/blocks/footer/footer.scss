@@ -150,6 +150,11 @@
 		margin-bottom: rem(22);
 	}
 
+    &__contact {
+        @include flex-center-y;
+        gap: rem(7);
+    }
+
 	&__messanger {
 		width: rem(17);
 		height: rem(17);
