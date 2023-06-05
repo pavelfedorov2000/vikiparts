@@ -1,3 +1,7 @@
+.truck-block {
+    padding-bottom: rem(30);
+}
+
 .truck {
     position: relative;
     padding: rem(20) 0;
@@ -8,13 +12,15 @@
     }
 
     &::after {
-        content: '';
-        @include position-center-x;
-        bottom: 0;
-        z-index: -1;
-        width: 100vw;
-        height: 55%;
-        background-color: var(--gray-3);
+        @include media('1025', min) {
+            content: '';
+            @include position-center-x;
+            bottom: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 55%;
+            background-color: var(--gray-3);
+        }
     }
 
     // .truck__row
@@ -28,23 +34,10 @@
         }
     }
 
-    /* &__img {
-        display: block;
-        aspect-ratio: 554 / 372;
-    } */
-
     // .truck__col
 
     &__col {
         @include flex-column;
-    }
-
-    // .truck__img-descr
-
-    &__img-descr {
-        padding-left: rem(20);
-        border-left: 3px solid var(--black);
-        @include font-size(14, 21);
     }
 
     &__title {
@@ -113,9 +106,13 @@
             z-index: 2;
             display: inline-block;
             padding: rem(7.5) rem(12.5) rem(7.5);
-            background-color: var(--gray-3);
+            background-color: var(--white);
             border: 1px solid var(--gray-2);
             @include font-size(16, 24);
+
+            @include media('1025', min) {
+                background-color: var(--gray-3);
+            }
         }
 
         &::after {

@@ -10,12 +10,13 @@
 
 	&.disabled,
 	&[disabled] {
+        background-color: var(--gray);
 		border: none;
 		cursor: not-allowed;
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: #fff;
+				color: var(--white);
 			}
 		}
 	}
@@ -52,7 +53,8 @@
 
                 @media (any-hover: hover) {
                     &:hover {
-                        box-shadow: var(--bsh);
+                        background-color: var(--white);
+                        color: var(--black);
                     }
                 }
 			}

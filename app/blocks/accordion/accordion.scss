@@ -3,8 +3,7 @@
     // .accordion-item__toggle
 
     &__arrow {
-        grid-area: arrow;
-        align-self: end;
+        grid-column: -2 / -1;
         position: relative;
         @include round(rem(31));
         background-color: var(--accent);
@@ -21,7 +20,6 @@
     }
 
     &__title {
-        grid-area: title;
         @include font-size(24, 29);
         font-weight: 600;
 
@@ -31,13 +29,17 @@
     }
 
     &__subtitle {
-        grid-area: subtitle;
+        grid-column: 1 / 2;
         @include font-size(20, 30);
         font-weight: 400;
         color: var(--gray-2);
 
         @include media('767', max) {
             font-size: rem(16);
+        }
+
+        & + #{$this}__arrow {
+            align-self: end;
         }
     }
 
@@ -50,10 +52,7 @@
         display: grid;
         grid-template-columns: 1fr auto;
         gap: rem(15);
-        grid-template-areas:
-        'title arrow'
-        'subtitle arrow'
-        ;
+        align-items: center;
         border-bottom: 1px dashed var(--gray-2);
 
         @include media('1025', min) {
@@ -73,6 +72,10 @@
         max-height: 0;
         overflow: hidden;
         transition: var(--transition) max-height;
+
+        @include media('1025', min) {
+            @include padding-x(rem(45));
+        }
         
         ul {
             margin-left: rem(20);
@@ -93,10 +96,6 @@
         @include padding-y(rem(30));
         display: grid;
         gap: rem(36) rem(48);
-
-        @include media('1025', min) {
-            padding: rem(30) var(--container-padding);
-        }
 
         @include media('768', min) {
             grid-template-columns: repeat(2, 1fr);
